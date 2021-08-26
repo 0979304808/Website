@@ -11,11 +11,13 @@ class LoginController extends Controller
 {
     use Authorization;
 
+    // View Login
     public function index()
     {
         return view('backend.auth.login');
     }
 
+    // Login
     public function login(LoginRequest $request)
     {
         $params = $request->only('email', 'password', 'active');

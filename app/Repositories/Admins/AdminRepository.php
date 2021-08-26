@@ -8,7 +8,7 @@ use App\Admin;
 
 class AdminRepository extends BaseRepository implements AdminRepositoryInterface
 {
-
+    const _limit = 20;
     protected $model;
 
     public function __construct(Admin $admin)
@@ -24,6 +24,10 @@ class AdminRepository extends BaseRepository implements AdminRepositoryInterface
         return $this->model->update([
             'image' => $path
         ]);
+    }
+
+    public function WithRolePermissions(){
+        return $this->model->with(['roles', 'permissions'])->latest()->paginate(self::_limit, ['id', 'username', 'email', 'image', 'active']);
     }
 
 

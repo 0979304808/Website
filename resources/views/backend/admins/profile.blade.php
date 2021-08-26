@@ -70,7 +70,7 @@
             <input type="email" id="email" class="form-control" name="email" value="{{ $admin->email }}" disabled />
             
             <label for="email">Password :</label>
-            <input type="password" id="password" class="form-control" name="password" />
+            <input type="password" id="password" class="form-control" name="password" required />
 
             <br/>
             <button type="submit" class="btn btn-success btn-user-update">Update</button>

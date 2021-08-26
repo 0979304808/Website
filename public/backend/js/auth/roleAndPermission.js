@@ -13,6 +13,7 @@ $(function(){
                     _method: 'DELETE'
                 },
                 success:function(res){
+                    console.log(res);
                     notify('Xoá thành công!', 'success');
                     setTimeout(() => {
                         window.location.reload(true);

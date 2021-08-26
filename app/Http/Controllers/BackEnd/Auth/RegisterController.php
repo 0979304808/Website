@@ -17,11 +17,14 @@ class RegisterController extends Controller
         $this->model = $admin;
     }
 
+    // View Register
     public function index()
     {
         return view('backend.auth.register');
     }
 
+
+    // Register 
     public function register(RegisterRequest $request)
     {
         $params = $request->only('username', 'email', 'password');

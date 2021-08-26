@@ -3,7 +3,22 @@
     {{ HTML::script('backend/js/auth/register.js') }}
 @endsection
 @section('main')
-<form action="" method="POST" name="register-admin">
+@if ($errors->any())
+    <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <span>{{ $error }}</span>
+            @endforeach
+    </div>
+@endif
+
+@if (session('msg'))
+    <div class="alert alert-success">
+        {{ session('msg') }}
+    </div>
+@endif
+
+<form action="{{ route('backend.register') }}" method="POST" name="register-admin">
+    @csrf
     <h1>Create Account</h1>
     <div>
         <input type="text" name="username" class="form-control" placeholder="Username" required="" />
@@ -21,7 +36,7 @@
         <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirm" required="" />
     </div>
     <div>
-        <button class="btn btn-default submit btn-register">Submit</button>
+        <button type="submit" class="btn btn-default submit btn-register">Submit</button>
     </div>
 
     <div class="clearfix"></div>

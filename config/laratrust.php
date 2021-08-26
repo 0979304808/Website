@@ -18,7 +18,7 @@ return [
     | are going to be used are the ones inside the 'user_models' array.
     |
     */
-    'use_morph_map' => false,
+    'use_morph_map' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -104,7 +104,7 @@ return [
     |
     */
     'user_models' => [
-        'users' => 'App\User',
+        'admins' => 'App\Admin',
     ],
 
     /*
@@ -162,12 +162,12 @@ return [
         /**
          * Role - User intermediate table.
          */
-        'role_user' => 'role_user',
+        'role_user' => 'admin_role',
 
         /**
          * Permission - User intermediate table.
          */
-        'permission_user' => 'permission_user',
+        'permission_user' => 'admin_permission',
 
         /**
          * Permission - Role intermediate table.
@@ -188,7 +188,7 @@ return [
         /**
          * User foreign key on Laratrust's role_user and permission_user tables.
          */
-        'user' => 'user_id',
+        'user' => 'admin_id',
 
         /**
          * Role foreign key on Laratrust's role_user and permission_role tables.
@@ -225,7 +225,7 @@ return [
          * Method to be called in the middleware return case.
          * Available: abort|redirect
          */
-        'handling' => 'abort',
+        'handling' => 'redirect',
 
         /**
          * Handlers for the unauthorized method in the middlewares.
@@ -246,7 +246,7 @@ return [
              * If the message content is empty it won't be added to the redirection.
              */
             'redirect' => [
-                'url' => '/home',
+                'url' => '/admin/dashboard',
                 'message' => [
                     'key' => 'error',
                     'content' => ''

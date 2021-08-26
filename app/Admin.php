@@ -12,6 +12,7 @@ class Admin extends Authenticatable
     use LaratrustUserTrait;
     use Notifiable;
     use SoftDeletes;
+
     protected $table = 'admins';
 
     protected $guard = 'admin';
@@ -41,5 +42,12 @@ class Admin extends Authenticatable
     public function permissions()
     {
         return $this->belongsToMany(Permission::class)->withPivotValue('user_type', self::class);
+    }
+
+    public function getPermissionsViaRoles(){
+        return $this->load('roles', 'roles.permissions')
+            ->roles->flatMap(function ($role) {
+                return $role->permissions;
+            })->sort()->values();
     }
 }

@@ -29,4 +29,12 @@ class RegisterRequest extends FormRequest
             'password' => 'required'
         ];
     }
+
+    public function messages(){
+        return [
+            'required' => ':attribute không được để trống',
+            'email' => ':attribute không đúng định dạng',
+            'unique' => ':attribute đã tồn tại',
+        ];
+    }
 }

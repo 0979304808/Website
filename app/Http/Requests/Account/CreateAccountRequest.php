@@ -29,4 +29,13 @@ class CreateAccountRequest extends FormRequest
             'username' => 'required|min:3'
         ];
     }
+
+    public function message(){
+        return [
+            'required' => ':attribute không được để trống',
+            'email' => ':attribute không đúng định dạng',
+            'unique' => ':attribute đã tồn tại',
+            'min' => ':attribute phải từ :min ký tự'
+        ];
+    }
 }

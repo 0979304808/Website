@@ -21,6 +21,7 @@ class AdminController extends Controller
         $this->admin = $admin;
     }
 
+    // Update user
     public function updateProfile(Request $request,Admin $admin){
         $attributes = $request->only('username', 'password');
         if(!empty($attributes)){
@@ -31,11 +32,7 @@ class AdminController extends Controller
         return redirect()->back()->with('errors','Update không thành công');
     }
 
-    /*
-     * Update image profile
-     * @param File $image
-     */
-//ImageRequest
+    // Update Image
     public function updateImage(ImageRequest $request, Admin $admin){
         if($request->hasFile('image')){
             $repo = new AdminRepository($admin);
@@ -44,10 +41,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    /*
-     * Get profile admin
-     * @param int $admin
-     */
+    // Show user
     public function profile(Admin $admin){
         $view = view('backend.admins.profile');
         $view->with('admin', $admin);

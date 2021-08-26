@@ -28,4 +28,10 @@ class LoginRequest extends FormRequest
             'password' => 'required'
         ];
     }
+    public function message(){
+        return [
+            'required' => ':attribute không được để trống',
+            'email' => ':attribute không đúng định dạng',
+        ];
+    }
 }

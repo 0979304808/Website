@@ -1,5 +1,12 @@
 @extends('backend.auth.layout')
 @section('main')
+@if ($errors->any())
+    <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <span>{{ $error }}</span>
+            @endforeach
+    </div>
+@endif
 <form action="{{route('backend.login')}}" method="POST">
     {{ csrf_field() }}
     <h1>Login Form</h1>

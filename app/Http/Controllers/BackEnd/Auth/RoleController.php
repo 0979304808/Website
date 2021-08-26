@@ -7,40 +7,22 @@ use App\Permission;
 use App\Role;
 use Illuminate\Http\Request;
 use App\Http\Requests\Roles\CreateRoleRequest;
+use App\Repositories\Roles\Contract\RoleRepositoryInterface;
 use JavaScript;
 class RoleController extends ApiController
 {
+    private $model;
     private $role;
     private $permission;
 
-
-    public function create(CreateRoleRequest $request){
-        $role = Role::firstOrCreate($request->except('_token'));
-        
-        return redirect()->back();
+    public function __construct(RoleRepositoryInterface $role)
+    {
+        $this->model = $role;
     }
 
-    public function delete(){
-        $id = request('id');
-        $role = Role::findOrFail($id);
-        if($role->delete()){
-            return $this->success('Deleted');
-        }
-        return $this->error('Cannot delete role', 400);
-    }
-
-    public function addPermissionToRole(Request $request){
-        $role = Role::find($request->id);
-        $permissions = $request->permissions;
-        if($role){
-            (!empty($permissions)) ? $role->syncPermissions($permissions) : $role->detachPermissions();
-            return $this->success('Success');
-        }
-        return $this->error('Error sync permission', 400);
-    }
-
+    // List Permission and Role
     public function list(){
-        $roles = Role::with('permissions')->latest()->paginate();
+        $roles = $this->model->WithPermissions();
         $permissions = Permission::all();
         JavaScript::put([
             'roles' => $roles,
@@ -53,4 +35,31 @@ class RoleController extends ApiController
         $view->with('permissions', $permissions);
         return $view;
     }
+
+    // Create Role
+    public function create(CreateRoleRequest $request){
+        $role = $this->model->firstOrCreate($request->except('_token'));
+        return redirect()->back();
+    }
+    // Delete Role
+    public function delete(){
+        $id = request('id');
+        $role = $this->model->findOneOrFail($id);
+        if($role->delete()){
+            return $this->success('Deleted');
+        }
+    }
+
+    // Add Permission To Role
+    public function addPermissionToRole(Request $request){
+        $role =  $this->model->findOneOrFail($request->id);
+        $permissions = $request->permissions;
+        if($role){
+            (!empty($permissions)) ? $role->syncPermissions($permissions) : $role->detachPermissions();
+            return $this->success('Success');
+        }
+        return $this->error('Error sync permission', 400);
+    }
+
+
 }
