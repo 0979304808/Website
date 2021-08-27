@@ -22,19 +22,21 @@ class AdminController extends Controller
     }
 
     // Update user
-    public function updateProfile(Request $request,Admin $admin){
+    public function updateProfile(Request $request, Admin $admin)
+    {
         $attributes = $request->only('username', 'password');
-        if(!empty($attributes)){
+        if (!empty($attributes)) {
             $guard = $this->guard()->user();
             $guard->update($attributes);
-            return redirect()->back()->with('success','Thành công');
+            return redirect()->back()->with('success', 'Thành công');
         }
-        return redirect()->back()->with('errors','Update không thành công');
+        return redirect()->back()->with('errors', 'Update không thành công');
     }
 
     // Update Image
-    public function updateImage(ImageRequest $request, Admin $admin){
-        if($request->hasFile('image')){
+    public function updateImage(ImageRequest $request, Admin $admin)
+    {
+        if ($request->hasFile('image')) {
             $repo = new AdminRepository($admin);
             $repo->updateImage($request->file('image'));
         }
@@ -42,7 +44,8 @@ class AdminController extends Controller
     }
 
     // Show user
-    public function profile(Admin $admin){
+    public function profile(Admin $admin)
+    {
         $view = view('backend.admins.profile');
         $view->with('admin', $admin);
         return $view;

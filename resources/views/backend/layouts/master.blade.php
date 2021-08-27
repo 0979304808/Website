@@ -58,7 +58,9 @@
         <script src="{{url('vendors/bootstrap-notify/bootstrap-notify.min.js')}}"></script>
         <script src="{{url('vendors/bootstrap3-editable/bootstrap3-editable/js/bootstrap-editable.min.js')}}"></script>
         <script src="{{url('vendors/select2/dist/js/select2.full.min.js')}}"></script>
-
+        <script src="{{ url('vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ url('vendors/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+        <script src="{{ url('vendors/switchery/dist/switchery.min.js')  }}"></script>
         {{-- before script --}}
         @yield('before-script')
         <!-- Custom Theme Scripts -->

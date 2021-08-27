@@ -17,8 +17,8 @@ trait Authorization {
         return Auth::guard('admin');
     }
 
-    public function getUserMazii(){
-        $token = request()->header('Authorization');
-        return UserMazii::findToken($token);
-    }
+//    public function getUserMazii(){
+//        $token = request()->header('Authorization');
+//        return UserMazii::findToken($token);
+//    }
 }

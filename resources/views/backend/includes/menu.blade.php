@@ -1,4 +1,33 @@
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+
+    <div class="menu_section">
+        <h3>Bài viết</h3>
+        <ul class="nav side-menu">
+            @role('administrator')
+            <li class="{{ Request::is('auth') ? 'active' : '' }}"><a><i class="fa fa-folder-open-o" aria-hidden="true"></i> Bài viết <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li class="{{ Request::is('posts') ? 'active' : '' }}">
+                        <a href="{{ route('backend.post') }}">Danh sách</a>
+                    </li>
+                    <li class="{{ Request::is('posts') ? 'active' : '' }}">
+                        <a href="{{ route('backend.post.form') }}">Bài viết mới</a>
+                    </li>
+                    <li class="{{ Request::is('categories') ? 'active' : '' }}">
+                        <a href="{{ route('backend.category') }}">Danh mục</a>
+                    </li>
+                    <li class="{{ Request::is('tags') ? 'active' : '' }}">
+                        <a href="{{ route('backend.tag') }}">Thẻ</a>
+                    </li>
+
+                </ul>
+            </li>
+            @endrole
+        </ul>
+    </div>
+
+
+
     <div class="menu_section">
         <h3>Tài khoản</h3>
         <ul class="nav side-menu">

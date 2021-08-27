@@ -89,6 +89,48 @@ Route::group(['namespace' => 'BackEnd'], function () {
 
             });
         });
+
+
+        // Post
+        Route::group([
+            'prefix' => 'post',
+            'namespace' => 'Posts'
+        ],function (){
+
+            Route::get('/','PostController@list')->name('backend.post');
+            Route::put('/category','PostController@UpdatePostCategory')->name('backend.post.category');
+            Route::put('/tag','PostController@UpdatePostTag')->name('backend.post.tag');
+            Route::delete('/delete','PostController@delete')->name('backend.post.delete');
+
+            Route::get('/create','PostController@form')->name('backend.post.form');
+            Route::post('/create','PostController@create')->name('backend.post.create');
+
+        });
+
+        // Category
+        Route::group([
+            'prefix' => 'category',
+            'namespace' => 'Categories'
+        ],function (){
+
+            Route::get('/','CategoryController@list')->name('backend.category');
+            Route::post('/create','CategoryController@createOrupdate')->name('backend.category.create');
+            Route::delete('/delete','CategoryController@delete')->name('backend.category.delete');
+
+        });
+
+        // Tag
+        Route::group([
+            'prefix' => 'tag',
+            'namespace' => 'Tags'
+        ],function (){
+
+            Route::get('/','TagController@list')->name('backend.tag');
+            Route::post('/create','TagController@createOrupdate')->name('backend.tag.create');
+            Route::delete('/delete','TagController@delete')->name('backend.tag.delete');
+
+        });
+
     });
 
 

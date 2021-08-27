@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Route::delete('/role','BackEnd\Auth\RoleController@delete');
 
-Route::delete('/role','BackEnd\Auth\AccountController@updateRoleAdmin');
+
+Route::post('/post','BackEnd\Posts\PostController@create');

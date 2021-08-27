@@ -1,5 +1,4 @@
 $(function(){
-    console.log(roles);
     var data = roles.data;
     // Delete role
     $('.btn-delete-role').click(function(e){
@@ -24,7 +23,7 @@ $(function(){
                 }
             });
         }
-    })
+    });
 
     $('.btn-add-per-to-role').click(function(e){
         e.preventDefault();

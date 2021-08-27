@@ -50,4 +50,9 @@ class Admin extends Authenticatable
                 return $role->permissions;
             })->sort()->values();
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class,'admin_id');
+    }
 }
