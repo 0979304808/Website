@@ -144,4 +144,16 @@ class BaseRepository implements BaseRepositoryInterface {
             ]
         );
     }
+
+    /**
+     * Paginate arrays
+     * @param $path
+     */
+    public function Unlink($path){
+        if($path != null ){
+            if(\File::exists('uploads/images/'.basename($path))){
+               return unlink('uploads/images/'.basename($path));
+            }
+        }
+    }
 }

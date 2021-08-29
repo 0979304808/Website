@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
-@section('after-script')
+{{--  @section('after-script')
 
-@endsection
+@endsection  --}}
 @section('main')
     <div class="col-xs-12">
         <div class="x_panel">
@@ -79,9 +79,5 @@
             </div>
         </div>
     </div>
-
-
-
-
 
 @endsection

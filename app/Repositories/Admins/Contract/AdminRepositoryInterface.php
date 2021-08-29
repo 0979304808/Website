@@ -7,5 +7,6 @@ use App\Core\Repositories\Contract\BaseRepositoryInterface;
 interface AdminRepositoryInterface extends BaseRepositoryInterface
 {
 
-    public function updateImage($file);
+    public function updateImage($file, $id);
+    public function WithRolePermissions();
 }

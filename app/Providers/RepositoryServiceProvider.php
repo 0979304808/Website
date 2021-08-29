@@ -15,6 +15,11 @@ use App\Repositories\Tags\TagRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\Roles\Contract\RoleRepositoryInterface;
 use App\Repositories\Roles\RoleRepository;
+use App\Repositories\Codes\Contract\CodePurchaseRepositoryInterface;
+use App\Repositories\Codes\CodePurchaseRepository;
+use App\Repositories\Users\Contract\UserSubscribeRepositoryInterface;
+use App\Repositories\Users\UserSubscribeRepository;
+
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -48,6 +53,14 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             TagRepositoryInterface::class,
             TagRepository::class
+        );
+        $this->app->bind(
+            CodePurchaseRepositoryInterface::class,
+            CodePurchaseRepository::class
+        );
+        $this->app->bind(
+            UserSubscribeRepositoryInterface::class,
+            UserSubscribeRepository::class
         );
     }
 

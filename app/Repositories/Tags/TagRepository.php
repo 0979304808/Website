@@ -4,7 +4,7 @@ namespace App\Repositories\Tags;
 
 use App\Core\Repositories\BaseRepository;
 use App\Repositories\Tags\Contract\TagRepositoryInterface;
-use App\Tag;
+use App\Models\Tags\Tag;
 
 class TagRepository extends BaseRepository implements TagRepositoryInterface
 {

@@ -7,7 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laratrust\Traits\LaratrustUserTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
+use App\Models\Users\UserSubscribe;
 
 class User extends Authenticatable
 {
@@ -55,5 +55,15 @@ class User extends Authenticatable
     public function getUsername()
     {
         return ucwords($this->name);
+    }
+
+    public function user()
+    {
+        return ucwords($this->name);
+    }
+
+    public function usersubscribe()
+    {
+        return $this->hasMany(UserSubscribe::class, 'post_tag', 'tag_id', 'post_id');
     }
 }

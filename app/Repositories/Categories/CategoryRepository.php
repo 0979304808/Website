@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Categories;
 
-use App\Category;
+use App\Models\Categories\Category;
 use App\Core\Repositories\BaseRepository;
 use App\Repositories\Categories\Contract\CategoryRepositoryInterface;
 

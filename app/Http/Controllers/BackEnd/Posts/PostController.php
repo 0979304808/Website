@@ -5,8 +5,7 @@ namespace App\Http\Controllers\BackEnd\Posts;
 use App\Core\Traits\ApiResponser;
 use App\Core\Traits\Authorization;
 use App\Http\Requests\Posts\CreatePostRequest;
-use App\Post;
-use App\Repositories\Categories\CategoryRepository;
+use App\Repositories\Categories\Contract\CategoryRepositoryInterface;
 use App\Repositories\Posts\Contract\PostRepositoryInterface;
 use App\Repositories\Tags\Contract\TagRepositoryInterface;
 use Illuminate\Http\Request;
@@ -22,7 +21,7 @@ class PostController extends Controller
     private $category;
     private $tag;
 
-    public function __construct(PostRepositoryInterface $post, CategoryRepository $category, TagRepositoryInterface $tag)
+    public function __construct(PostRepositoryInterface $post, CategoryRepositoryInterface $category, TagRepositoryInterface $tag)
     {
         $this->post = $post;
         $this->category = $category;
@@ -40,9 +39,27 @@ class PostController extends Controller
     }
 
     // View List Post
-    public function list()
+    public function list(Request $request)
     {
-        $posts = $this->post->WithAll();
+
+        $category = $request->get('category','all');
+        $tag = $request->get('tag','all');
+        $search = $request->get('search',null);
+        if($category != 'all' && $category != null ){
+            $posts = $this->post->WhereHasCategory($category);
+        }
+        if($tag != 'all' && $tag != null){
+            $posts = $this->post->WhereHasTag($tag);
+        }
+        if($category != null && $tag != null && $tag != 'all' && $category != 'all'){
+            $posts = $this->post->WherehasCategoryTag($category, $tag);
+        }
+        if($search != null ){
+            $posts = $this->post->Search($search);  
+        }
+        if(!isset($posts)){
+            $posts = $this->post->WithAll();
+        }
         $categories = $this->category->all();
         $tags = $this->tag->all();
         $view = view('backend.posts.index');
@@ -51,6 +68,7 @@ class PostController extends Controller
             'link_update_post_category' => route('backend.post.category'),
             'link_update_post_tag' => route('backend.post.tag'),
             'link_delete_post' => route('backend.post.delete'),
+            'link_post' => route('backend.post'),
         ]);
         $view->with('posts', $posts);
         $view->with('categories', $categories);

@@ -72,4 +72,6 @@ interface BaseRepositoryInterface {
      * @return
      */
     public function paginateArrayResults(array $data, int $perPage = 20);
+
+    public function Unlink($path);
 }

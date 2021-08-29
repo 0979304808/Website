@@ -4,10 +4,12 @@ namespace App\Repositories\Admins;
 
 use App\Core\Repositories\BaseRepository;
 use App\Repositories\Admins\Contract\AdminRepositoryInterface;
-use App\Admin;
+use App\Models\Admins\Admin;
+use App\Core\Traits\UploadTable;
 
 class AdminRepository extends BaseRepository implements AdminRepositoryInterface
 {
+    use UploadTable;
     const _limit = 20;
     protected $model;
 
@@ -17,11 +19,13 @@ class AdminRepository extends BaseRepository implements AdminRepositoryInterface
         $this->model = $admin;
     }
 
-    public function updateImage($file)
+    public function updateImage($file,$id)
     {
+        $admin = $this->model->find($id);
+        $this->Unlink($admin->image);
         $filename = 'Thumb_image_' . time() . '.' . $file->getClientOriginalExtension();
-        $path = $this->saveImage($file, $filename);
-        return $this->model->update([
+        $path = $this->saveImage($file, $filename);      
+        return $admin->update([
             'image' => $path
         ]);
     }
@@ -29,6 +33,5 @@ class AdminRepository extends BaseRepository implements AdminRepositoryInterface
     public function WithRolePermissions(){
         return $this->model->with(['roles', 'permissions'])->latest()->paginate(self::_limit, ['id', 'username', 'email', 'image', 'active']);
     }
-
 
 }

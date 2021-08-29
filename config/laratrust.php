@@ -104,7 +104,7 @@ return [
     |
     */
     'user_models' => [
-        'admins' => 'App\Admin',
+        'admins' => 'App\Models\Admins\Admin',
     ],
 
     /*
@@ -121,12 +121,12 @@ return [
         /**
          * Role model
          */
-        'role' => 'App\Role',
+        'role' => 'App\Models\Roles\Role',
 
         /**
          * Permission model
          */
-        'permission' => 'App\Permission',
+        'permission' => 'App\Models\Permissions\Permission',
 
         /**
          * Team model

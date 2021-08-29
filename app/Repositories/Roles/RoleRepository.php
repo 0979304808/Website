@@ -6,7 +6,7 @@ use App\Core\Repositories\BaseRepository;
 use App\Repositories\Roles\Contract\RoleRepositoryInterface;
 use App\Core\Traits\ApiResponser;
 use App\Core\Traits\Authorization;
-use App\Role;
+use App\Models\Roles\Role;
 
 class RoleRepository extends BaseRepository implements RoleRepositoryInterface{
     use ApiResponser;

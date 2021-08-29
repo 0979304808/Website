@@ -2,31 +2,51 @@
 @section('after-script')
     {{ HTML::script('backend/js/posts/categoryAndtag.js') }}
     {{ HTML::script('backend/js/posts/updateAnddelete.js') }}
+    {{ HTML::script('backend/js/posts/search.js') }}
 @endsection
 @section('main')
 <div class="col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-            <h2>Bài Viết<small>Danh sách</small></h2>
-            <ul class="nav navbar-right panel_toolbox">
-                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li><a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-            </ul>
+            <h2 class="col-md-3 col-xs-3">Danh sách bài viết </h2>
+                <hr><br>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <p>Danh mục:</p>
+                    <select name="category" class="form-control">
+                            <option value="all" @if(request('category') == 'all' ) selected @endif >Tất cả</option>
+                        @foreach($categories as $key=>$value)
+                            <option value="{{ $value->id }}" @if(request('category') == $value->id ) selected @endif>{{ $value->title }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <p>Thẻ:</p>
+                    <select name="tag" class="form-control">
+                            <option value="all" @if(request('tag') == 'all' ) selected @endif >Tất cả</option>
+                        @foreach($tags as $key=>$value)
+                            <option value="{{ $value->id }}" @if(request('tag') == $value->id ) selected @endif>{{ $value->title }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <p>Từ khóa:</p>
+                    <input type="text" class="form-control input-search"
+                        placeholder="Nhập tiêu đề, mô tả ..." value="{{ request('search') }}">
+                </div>
             <div class="clearfix"></div>
         </div>
+        <div class="col-md-4 col-xs-4">Tổng: {{ count($posts)}} </div>
         <div class="x_content">
             <div class="table-responsive">
-                <table  id="datatable" class="table table-striped jambo_table table-bordered">
+                <table   class="table table-striped jambo_table table-bordered">
                     <thead>
-                        <th>STT</th>
-                        <th>Tiêu đề</th>
-                        <th>Mô tả</th>
-                        <th>Ảnh Bìa</th>
-                        <th>Tác giả</th>
-                        <th>Danh mục</th>
-                        <th>Thẻ</th>
+                        <th class="text-center">STT</th>
+                        <th class="text-center" >Tiêu đề</th>
+                        <th class="text-center" >Mô tả</th>
+                        <th class="text-center" >Ảnh Bìa</th>
+                        <th class="text-center" >Tác giả</th>
+                        <th class="text-center" >Danh mục</th>
+                        <th class="text-center" >Thẻ</th>
                         <th></th>
                     </thead>
                     <tbody>
@@ -66,7 +86,7 @@
     </div>
 </div>
 
-{{-- Modal list roles --}}
+{{-- Modal list category --}}
 <div class="modal fade modal-role-admin" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -93,7 +113,7 @@
     </div>
 </div>
 
-{{-- Modal list permissions --}}
+{{-- Modal list tag --}}
 <div class="modal fade modal-permission-admin" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">

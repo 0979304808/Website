@@ -20,4 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::delete('/role','BackEnd\Auth\RoleController@delete');
 
 
-Route::post('/post','BackEnd\Posts\PostController@create');
+Route::get('/codepurchase','BackEnd\Code\CodeController@codepurchase');

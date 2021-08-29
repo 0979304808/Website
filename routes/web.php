@@ -94,7 +94,8 @@ Route::group(['namespace' => 'BackEnd'], function () {
         // Post
         Route::group([
             'prefix' => 'post',
-            'namespace' => 'Posts'
+            'namespace' => 'Posts',
+            'middleware' => ['role:administrator|manager|editor']
         ],function (){
 
             Route::get('/','PostController@list')->name('backend.post');
@@ -131,9 +132,28 @@ Route::group(['namespace' => 'BackEnd'], function () {
 
         });
 
+        // code
+        Route::group([
+            'prefix' => 'code',
+            'namespace' => 'Code',
+            'middleware' => ['role:administrator']
+        ], function(){
+            Route::get('/transaction', 'CodeController@transaction')->name('backend.code.transaction');
+            Route::get('/codesended','CodeController@codesended')->name('backend.code.codesended');
+            Route::get('/codepurchase','CodeController@codepurchase')->name('backend.code.getcodepurchase');
+            
+        });
+
+        // users
+        Route::group([
+            'prefix' => 'user',
+            'namespace' => 'Users',
+            'middleware' => ['role:administrator']
+        ], function(){
+            Route::get('/usersubscribe', 'UserController@usersubscribe')->name('backend.user.usersubscribe');
+        });
+
+
     });
-
-
-
 
 });

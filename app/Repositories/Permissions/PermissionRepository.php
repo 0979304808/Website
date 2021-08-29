@@ -3,7 +3,7 @@
 namespace App\Repositories\Permissions;
 
 use App\Core\Repositories\BaseRepository;
-use App\Permission;
+use App\Models\Permissions\Permission;
 use App\Repositories\Permissions\Contract\PermissionRepositoryInterface;
 use App\Core\Traits\ApiResponser;
 use App\Core\Traits\Authorization;
