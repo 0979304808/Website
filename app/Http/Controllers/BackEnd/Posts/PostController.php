@@ -31,9 +31,9 @@ class PostController extends Controller
     // View form create post
     public function form()
     {
-        if (request('id')){
+        if (request('id')) {
             $post = $this->post->find(request('id'));
-            return view('backend.posts.form',['post' => $post]);
+            return view('backend.posts.form', ['post' => $post]);
         }
         return view('backend.posts.form');
     }
@@ -42,27 +42,26 @@ class PostController extends Controller
     public function list(Request $request)
     {
 
-        $category = $request->get('category','all');
-        $tag = $request->get('tag','all');
-        $search = $request->get('search',null);
-        if($category != 'all' && $category != null ){
+        $category = $request->get('category', 'all');
+        $tag = $request->get('tag', 'all');
+        $search = $request->get('search', null);
+        if ($category != 'all' && $category != null) {
             $posts = $this->post->WhereHasCategory($category);
         }
-        if($tag != 'all' && $tag != null){
+        if ($tag != 'all' && $tag != null) {
             $posts = $this->post->WhereHasTag($tag);
         }
-        if($category != null && $tag != null && $tag != 'all' && $category != 'all'){
+        if ($category != null && $tag != null && $tag != 'all' && $category != 'all') {
             $posts = $this->post->WherehasCategoryTag($category, $tag);
         }
-        if($search != null ){
-            $posts = $this->post->Search($search);  
+        if ($search != null) {
+            $posts = $this->post->Search($search);
         }
-        if(!isset($posts)){
+        if (!isset($posts)) {
             $posts = $this->post->WithAll();
         }
         $categories = $this->category->all();
         $tags = $this->tag->all();
-        $view = view('backend.posts.index');
         JavaScript::put([
             'posts' => $posts,
             'link_update_post_category' => route('backend.post.category'),
@@ -70,6 +69,7 @@ class PostController extends Controller
             'link_delete_post' => route('backend.post.delete'),
             'link_post' => route('backend.post'),
         ]);
+        $view = view('backend.posts.index');
         $view->with('posts', $posts);
         $view->with('categories', $categories);
         $view->with('tags', $tags);
@@ -82,10 +82,10 @@ class PostController extends Controller
         $attribute = $request->only(['title', 'description', 'img']);
         $attribute['admin_id'] = Auth::id();
         $this->post->createOrUpdate($attribute);
-        if (request('id')){
-            return redirect()->back()->with('msg','Sửa bài viết thành công');
+        if (request('id')) {
+            return redirect()->back()->with('msg', 'Sửa bài viết thành công');
         }
-        return redirect()->back()->with('msg','Thêm bài viết mới thành công');
+        return redirect()->back()->with('msg', 'Thêm bài viết mới thành công');
 
     }
 

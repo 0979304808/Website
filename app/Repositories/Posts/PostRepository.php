@@ -25,7 +25,7 @@ class PostRepository extends BaseRepository implements PostRepositoryInterface
 
     public function createOrUpdate(array $attribute)
     {
-        if ($attribute['img']){
+        if ($attribute['img']) {
             $file = $attribute['img'];
             $filename = 'Thumb_image_' . time() . '.' . $file->getClientOriginalExtension();
             $attribute['img'] = $this->saveImage($file, $filename);
@@ -43,28 +43,32 @@ class PostRepository extends BaseRepository implements PostRepositoryInterface
 
     }
 
-    public function WhereHasCategory($id){
-        return $this->model->whereHas('categories', function ($query) use ($id){
-            $query->where('category_id',$id);
+    public function WhereHasCategory($id)
+    {
+        return $this->model->whereHas('categories', function ($query) use ($id) {
+            $query->where('category_id', $id);
         })->with(['categories', 'tags', 'author'])->paginate();
     }
 
-    public function WhereHasTag($id){
-        return $this->model->whereHas('tags', function ($query) use ($id){
+    public function WhereHasTag($id)
+    {
+        return $this->model->whereHas('tags', function ($query) use ($id) {
             $query->where('tag_id', $id);
         })->with(['categories', 'tags', 'author'])->paginate();
     }
 
-    public function WhereHasCategoryTag($category,$tag){
-        return $this->model->whereHas('tags', function ($query) use ($tag){
+    public function WhereHasCategoryTag($category, $tag)
+    {
+        return $this->model->whereHas('tags', function ($query) use ($tag) {
             $query->where('tag_id', $tag);
-        })->whereHas('categories', function ($query) use ($category){
+        })->whereHas('categories', function ($query) use ($category) {
             $query->where('category_id', $category);
         })->with(['categories', 'tags', 'author'])->paginate();
     }
 
-    public function Search($search){
-        return $this->model->where('title', 'like', '%'.$search.'%')->orWhere('description', 'like', '%'.$search.'%')->with(['categories', 'tags', 'author'])->paginate();
+    public function Search($search)
+    {
+        return $this->model->where('title', 'like', '%' . $search . '%')->orWhere('description', 'like', '%' . $search . '%')->with(['categories', 'tags', 'author'])->paginate();
     }
 
 

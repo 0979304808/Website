@@ -8,5 +8,6 @@ interface AdminRepositoryInterface extends BaseRepositoryInterface
 {
 
     public function updateImage($file, $id);
+
     public function WithRolePermissions();
 }

@@ -17,6 +17,7 @@ class CategoryController extends Controller
         $this->category = $category;
     }
 
+    // List categories
     public function list()
     {
         $categories = $this->category->all();
@@ -29,6 +30,7 @@ class CategoryController extends Controller
         return $view;
     }
 
+    // Create category
     public function createOrupdate(Request $request)
     {
         $attribute = $request->only('title');
@@ -37,6 +39,7 @@ class CategoryController extends Controller
 
     }
 
+    // Delete category
     public function delete()
     {
         $category = $this->category->findOneOrFail(request('id'));

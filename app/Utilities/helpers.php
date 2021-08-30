@@ -144,7 +144,6 @@ if(!function_exists('make_url_pagi')){
         {
             $string .= "&$key=$val";
         }
-
         return $uri . ($string ? '?'.ltrim($string, '&') : '');
     }
 }

@@ -15,10 +15,16 @@ use App\Repositories\Tags\TagRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\Roles\Contract\RoleRepositoryInterface;
 use App\Repositories\Roles\RoleRepository;
-use App\Repositories\Codes\Contract\CodePurchaseRepositoryInterface;
-use App\Repositories\Codes\CodePurchaseRepository;
+use App\Repositories\Codes\Contract\CodeRepositoryInterface;
+use App\Repositories\Codes\CodeRepository;
 use App\Repositories\Users\Contract\UserSubscribeRepositoryInterface;
 use App\Repositories\Users\UserSubscribeRepository;
+use App\Repositories\Serial\Contract\SerialRepositoryInterface;
+use App\Repositories\Serial\SerialRepository;
+use App\Repositories\Premiums\Contract\PremiumMaziiRepositoryInterface;
+use App\Repositories\Premiums\PremiumMaziiRepository;
+use App\Repositories\Purchase\Contract\MaziiPurchaseRepositoryInterface;
+use App\Repositories\Purchase\MaziiPurchaseRepository;
 
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -55,13 +61,26 @@ class RepositoryServiceProvider extends ServiceProvider
             TagRepository::class
         );
         $this->app->bind(
-            CodePurchaseRepositoryInterface::class,
-            CodePurchaseRepository::class
+            CodeRepositoryInterface::class,
+            CodeRepository::class
         );
         $this->app->bind(
             UserSubscribeRepositoryInterface::class,
             UserSubscribeRepository::class
         );
+        $this->app->bind(
+            SerialRepositoryInterface::class,
+            SerialRepository::class
+        );
+        $this->app->bind(
+            PremiumMaziiRepositoryInterface::class,
+            PremiumMaziiRepository::class
+        );
+        $this->app->bind(
+            MaziiPurchaseRepositoryInterface::class,
+            MaziiPurchaseRepository::class
+        );
+
     }
 
     /**

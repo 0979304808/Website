@@ -9,11 +9,13 @@ class HomeController extends Controller
 {
     use Authorization;
 
+    // View dashboard
     public function index()
     {
         return view('backend.dashboard.index');
     }
 
+    // Logout
     public function logout()
     {
         $this->guard()->logout();

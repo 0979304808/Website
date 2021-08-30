@@ -3,14 +3,13 @@
 namespace App\Models\Users;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
 class UserSubscribe extends Model
 {
-    protected $table = "user_subscribe";
+    protected $connection = 'mazii';
     protected $guarded = [];
+    protected $table = 'user_subscribes';
 
-    public function users()
-    {
-        return $this->belongsTo(User::class, 'user_id');
+    public function user(){
+        return $this->belongsTo(UserMazii::class, 'user_id', 'userId');
     }
 }

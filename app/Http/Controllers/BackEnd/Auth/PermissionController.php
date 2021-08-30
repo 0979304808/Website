@@ -15,7 +15,6 @@ class PermissionController extends Controller
         $this->permission = $permission;
     }
 
-
     // Create Permission
     public function create(CreatePermissionRequest $request)
     {

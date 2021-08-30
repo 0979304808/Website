@@ -1,16 +1,15 @@
 @extends('backend.layouts.master')
 @section('after-script')
-{{--  <script src="{{ url('backend/js/users/usersubscribe.js') }}">  --}}
-</script>
+    {{ HTML::script('backend/js/users/usersubscribe.js') }}
 @endsection
 @section('main')
     <div class="col-md-12 col-xs-12" style="position: -webkit-sticky; position: sticky; top: 0;">
         <div class="x_panel">
             <ul id="myTab" class="nav nav-tabs bar_tabs">
-                <li  class="{{ Request::is('*code/transaction') ? 'active' : ""}}"><a href="{{route('backend.code.transaction')}}" 
+                <li  class="{{ Request::is('*code/transaction') ? 'active' : ""}}"><a href="{{route('backend.code.transaction')}}"
                         aria-expanded="false">Phiên giao dịch</a>
                 </li>
-                <li  class="{{ Request::is('*user/usersubscribe') ? 'active' : ""}}"><a href="{{route('backend.user.usersubscribe')}}" 
+                <li  class="{{ Request::is('*user/usersubscribe') ? 'active' : ""}}"><a href="{{route('backend.user.usersubscribe')}}"
                         aria-expanded="true">User đăng ký</a>
                 </li>
             </ul>
@@ -27,7 +26,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-4">
                     <p>Từ khóa:</p>
                     <input type="text" class="form-control input-search"
-                        placeholder="Nhập username, email,tên gói..." value="{{ (!is_null($search)) ? $search : '' }}">
+                        placeholder="Nhập username, email, tên gói ..." value="{{ (!is_null($search)) ? $search : '' }}">
                 </div>
                 <div class="clearfix"></div>
             </div>

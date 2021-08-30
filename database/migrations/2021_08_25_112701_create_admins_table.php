@@ -22,7 +22,6 @@ class CreateAdminsTable extends Migration
             $table->boolean('active')->default(false);
             $table->rememberToken();
             $table->timestamps();
-
             $table->softDeletes();
         });
     }

@@ -8,7 +8,8 @@ use App\Core\Traits\ApiResponser;
 use App\Core\Traits\Authorization;
 use App\Models\Roles\Role;
 
-class RoleRepository extends BaseRepository implements RoleRepositoryInterface{
+class RoleRepository extends BaseRepository implements RoleRepositoryInterface
+{
     use ApiResponser;
     use Authorization;
     protected $model;
@@ -19,7 +20,8 @@ class RoleRepository extends BaseRepository implements RoleRepositoryInterface{
         $this->model = $role;
     }
 
-    public function WithPermissions(){
+    public function WithPermissions()
+    {
         return $this->model->with('permissions')->latest()->paginate();
     }
 }

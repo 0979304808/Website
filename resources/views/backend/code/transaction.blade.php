@@ -19,29 +19,28 @@
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <p>Lọc:</p>
                     <select name="sort" class="form-control">
-                        <option value="new" @if ($sort == 'new') selected @endif>Mới nhất</option>
-                        <option value="old" @if ($sort == 'old') selected @endif>Cũ nhất</option>
+                        <option value="new" @if( request('sort') == 'new') selected @endif >Mới nhất</option>
+                        <option value="old" @if( request('sort') == 'old') selected @endif>Cũ nhất</option>
                     </select>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <p>Tìm kiếm:</p>
                     <select name="provider" class="form-control">
-                        @foreach ($providers as $k => $v)
-                            <option value="{{ $k }}" @if ($k == $filter) selected @endif>{{ $v }}</option>
+                        @foreach ($providers as $key => $value)
+                            <option value="{{ $key }}" @if(request('filter') == $key) selected  @endif>{{ $value }}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-4">
                     <p>Từ khóa:</p>
                     <input type="text" class="form-control input-search"
-                        placeholder="Nhập email, user_id, transaction, id,..." value="{{ $search }}">
+                        placeholder="Nhập user id, email, transaction ..." value="{{ request('search') }}">
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <div class="col-md-4 col-xs-4">Tổng: {{ $results->total }}</div>
+            <div class="col-md-4 col-xs-4">Tổng: {{ count($premiumMazii) }}</div>
             <div class="x_content">
                 <div class="table-responsive">
-                    {!! $paging['html'] !!}
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <th class="text-center">User ID</th>
@@ -53,12 +52,12 @@
                             <th class="text-center">Expried</th>
                         </thead>
                         <tbody>
-                            @foreach ($results->data as $key => $value)
+                            @foreach ($premiumMazii as $key => $value)
                                 <tr>
                                     <td>{{ $value->userId }}</td>
                                     <td>{{ $value->user->username }}</td>
                                     <td>{{ $value->user->email }}</td>
-                                    <td>{{ $value->transaction}} 
+                                    <td>{{ $value->transaction}}
                                     @if ($value->provider == 'card')
                                         <button data-toggle="modal" data-target=".modal_purchase" data-code="{{ $value->transaction }}" class="btn btn-xs btn-primary pull-right purchase_detail">Chi tiết đơn</button>
                                     @endif
@@ -68,10 +67,9 @@
                                     <td>{{ $value->expire_at }}</td>
                                 </tr>
                             @endforeach
-
                         </tbody>
                     </table>
-                    {!! $paging['html'] !!}
+                    {{ $premiumMazii->appends(['filter' => request('filter'),'sort' => request('sort'),'search' => request('search')])->links() }}
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@ class AdminController extends Controller
     }
 
     // Update user
-    public function updateProfile(Request $request,  $id)
+    public function updateProfile(Request $request, $id)
     {
         $admin = $this->admin->find($id);
         $attributes = $request->only('username', 'password');
@@ -36,7 +36,7 @@ class AdminController extends Controller
     public function updateImage(ImageRequest $request, $id)
     {
         if ($request->hasFile('image')) {
-            $this->admin->updateImage($request->file('image'),$id);
+            $this->admin->updateImage($request->file('image'), $id);
         }
         return redirect()->back();
     }

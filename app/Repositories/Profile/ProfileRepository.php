@@ -6,7 +6,8 @@ use App\Core\Repositories\BaseRepository;
 use App\Models\Socials\Profile;
 use App\Repositories\Profile\Contract\ProfileRepositoryInterface;
 
-class ProfileRepository extends BaseRepository implements ProfileRepositoryInterface {
+class ProfileRepository extends BaseRepository implements ProfileRepositoryInterface
+{
 
     protected $model;
 

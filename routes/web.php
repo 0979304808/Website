@@ -141,7 +141,8 @@ Route::group(['namespace' => 'BackEnd'], function () {
             Route::get('/transaction', 'CodeController@transaction')->name('backend.code.transaction');
             Route::get('/codesended','CodeController@codesended')->name('backend.code.codesended');
             Route::get('/codepurchase','CodeController@codepurchase')->name('backend.code.getcodepurchase');
-            
+            Route::post('/recalled','CodeController@recalled')->name('backend.code.recalled');
+
         });
 
         // users

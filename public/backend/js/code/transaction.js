@@ -32,6 +32,7 @@ $(function () {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (res) {
+                console.log(res);
                 if(res.status == 200){
                     var purchase = res.data;
                     $("#name_p").html(' ' + purchase.name);
@@ -43,7 +44,7 @@ $(function () {
                     $("#address_p").html(' ' + purchase.address);
                     $("#phone_p").html(' ' + purchase.phone);
                     $("#time_success_p").html((purchase.time_success) ? ' ' + purchase.time_success : '');
-                    $("#salesman_p").html((purchase.admin != null) ? ' ' + purchase.admin.username : '');
+                    $("#salesman_p").html((purchase.admin_user != null) ? ' ' + purchase.admin_user.username : '');
                     $("#care_dairy_p").html(' ' + $("<p>" +purchase.care_dairy + "</p>").text()); //trick strip_tag html
                 }
             },

@@ -5,14 +5,15 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laratrust\Traits\LaratrustUserTrait;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Users\UserSubscribe;
 
 class User extends Authenticatable
 {
     use LaratrustUserTrait;
     use Notifiable;
-    use SoftDeletes;
+
+    protected $table = 'users';
+    protected $guarded = [];
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'email', 'password',
     ];
 
     /**
@@ -63,6 +64,6 @@ class User extends Authenticatable
 
     public function usersubscribe()
     {
-        return $this->hasMany(UserSubscribe::class, 'post_tag', 'tag_id', 'post_id');
+        return $this->hasMany(UserSubscribe::class);
     }
 }

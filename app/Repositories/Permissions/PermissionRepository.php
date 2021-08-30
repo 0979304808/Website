@@ -8,7 +8,8 @@ use App\Repositories\Permissions\Contract\PermissionRepositoryInterface;
 use App\Core\Traits\ApiResponser;
 use App\Core\Traits\Authorization;
 
-class PermissionRepository extends BaseRepository implements PermissionRepositoryInterface {
+class PermissionRepository extends BaseRepository implements PermissionRepositoryInterface
+{
     use ApiResponser;
     use Authorization;
     protected $model;

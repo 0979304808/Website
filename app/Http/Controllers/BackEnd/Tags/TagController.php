@@ -7,6 +7,7 @@ use App\Repositories\Tags\Contract\TagRepositoryInterface;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use JavaScript;
+
 class TagController extends Controller
 {
     use ApiResponser;
@@ -17,6 +18,7 @@ class TagController extends Controller
         $this->tag = $tag;
     }
 
+    // List tags
     public function list()
     {
         $tags = $this->tag->all();
@@ -29,18 +31,20 @@ class TagController extends Controller
         return $view;
     }
 
+    // Create tag
     public function createOrupdate(Request $request)
     {
         $attribute = $request->only('title');
         $this->tag->create($attribute);
-        return redirect()->back()->with('msg','Thêm thẻ thành công');
+        return redirect()->back()->with('msg', 'Thêm thẻ thành công');
 
     }
 
+    // Delete tag
     public function delete()
     {
         $tag = $this->tag->findOneOrFail(request('id'));
-        if ($tag){
+        if ($tag) {
             $tag->delete();
             $tag->posts()->detach();
             return $this->success('Delete');

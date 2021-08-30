@@ -26,10 +26,11 @@ $(function () {
                 type: 'post',
                 url: url_recalled,
                 data: {
-                    key: key
+                    key: key,
+                    _method : 'POST'
                 },
                 success: function (res) {
-                    res = res.trim();
+                    // res = res.trim();
                     if (res) {
                         $.notify({
                             message: "Thu hồi mã thành công !"
