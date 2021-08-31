@@ -1,6 +1,27 @@
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
     @role('administrator|manager|editor')
+    <div class="menu_section">
+        <h3>Cộng đồng</h3>
+        <ul class="nav side-menu">
+            <li class="{{ Request::is('social') ? 'active' : '' }}"><a><i class="fa fa-folder-open-o" aria-hidden="true"></i> Cộng đồng <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li class="{{ Request::is('social/accounts') ? 'active' : '' }}">
+                        <a href="{{ route('backend.social.account') }}">Tài khoản</a>
+                    </li>
+                    <li class="{{ Request::is('social/jlpt') ? 'active' : '' }}">
+                        <a href="{{ route('backend.social.jlpt.index') }}">Thông tin về JLPT</a>
+                    </li>
+                    {{--<li class="{{ Request::is('posts') ? 'active' : '' }}">--}}
+                        {{--<a href="{{ route('backend.post.form') }}">Bài viết mới</a>--}}
+                    {{--</li>--}}
+                </ul>
+            </li>
+        </ul>
+    </div>
+    @endrole
+
+    @role('administrator|manager|editor')
         <div class="menu_section">
             <h3>Bài viết</h3>
             <ul class="nav side-menu">

@@ -25,6 +25,14 @@ use App\Repositories\Premiums\Contract\PremiumMaziiRepositoryInterface;
 use App\Repositories\Premiums\PremiumMaziiRepository;
 use App\Repositories\Purchase\Contract\MaziiPurchaseRepositoryInterface;
 use App\Repositories\Purchase\MaziiPurchaseRepository;
+use App\Repositories\Jlpt\Contract\JlptRepositoryInterface;
+use App\Repositories\Jlpt\JlptRepository;
+use App\Repositories\Languages\Contract\LanguageRepositoryInterface;
+use App\Repositories\Languages\LanguageRepository;
+use App\Repositories\UserMazii\Contract\UserMaziiRepositoryInterface;
+use App\Repositories\UserMazii\UserMaziiRepository;
+use App\Repositories\Profile\Contract\ProfileRepositoryInterface;
+use App\Repositories\Profile\ProfileRepository;
 
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -79,6 +87,22 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             MaziiPurchaseRepositoryInterface::class,
             MaziiPurchaseRepository::class
+        );
+        $this->app->bind(
+            JlptRepositoryInterface::class,
+            JlptRepository::class
+        );
+        $this->app->bind(
+            LanguageRepositoryInterface::class,
+            LanguageRepository::class
+        );
+        $this->app->bind(
+            UserMaziiRepositoryInterface::class,
+            UserMaziiRepository::class
+        );
+        $this->app->bind(
+            ProfileRepositoryInterface::class,
+            ProfileRepository::class
         );
 
     }

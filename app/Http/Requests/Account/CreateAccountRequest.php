@@ -25,8 +25,8 @@ class CreateAccountRequest extends FormRequest
     {
         // connection db mazii
         return [
-            'email' => 'required|email|unique:admins',
-            'username' => 'required|min:3'
+            'email' => 'required|email|unique:users',
+            'username' => 'required|min:3',
         ];
     }
 

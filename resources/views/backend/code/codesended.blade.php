@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('after-script')
-    {{ HTML::script('backend/js/code/codesended.js') }}
+    {{--{{ HTML::script('backend/js/code/codesended.js') }}--}}
 @endsection
 @section('main')
     <div class="col-md-12 col-xs-12" style="position: -webkit-sticky; position: sticky; top: 0;">
@@ -11,8 +11,8 @@
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <p>Lọc:</p>
                     <select name="sort" class="form-control">
-                        {{--<option value="new" {{ $sort == 'new' ? 'selected' : '' }}>Mới nhất</option>--}}
-                        {{--<option value="old" {{ $sort == 'old' ? 'selected' : '' }}>Cũ nhất</option>--}}
+                        <option value="new" {{ request('sort') == 'new' ? 'selected' : '' }}>Mới nhất</option>
+                        <option value="old" {{ request('sort') == 'old' ? 'selected' : '' }}>Cũ nhất</option>
                     </select>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
@@ -45,50 +45,51 @@
                             <th class="text-center">Biên tập</th>
                         </thead>
                         <tbody>
-                        {{ dd($codes) }}
-                            {{--@foreach ($list_codes->data as $key => $code)--}}
-                                {{--<tr>--}}
-                                    {{--<td>{{ $from_stt_of_view += 1 }}</td>--}}
-                                    {{--<td>--}}
-                                        {{--<span>{{ $code->serialkey }}</span>--}}
+                            @foreach ($codes as $key => $code)
+                                <tr>
+                                    <td>{{ $key + 1 }}</td>
+                                    <td>
+                                        <span>{{ $code->code }}</span>
                                         {{--<span--}}
-                                            {{--class="pull-right label label-{{ $code->state == 0 ? 'default' : ($code->state == 1 ? 'warning' : 'success') }}">{{ $state[$code->state] }}--}}
+
+
+                                            {{--class="pull-right label label- {{ $code->state == 0 ? 'default' : ($code->state == 1 ? 'warning' : 'success') }}">{{ $state[$code->state] }}--}}
                                         {{--</span>--}}
-                                    {{--</td>--}}
-                                    {{--<td>--}}
+                                    </td>
+                                    <td>
                                         {{--@if (isset($code->purchase->admin->username))--}}
                                             {{--{{ $code->purchase->admin->username }}--}}
                                         {{--@endif--}}
-                                    {{--</td>--}}
-                                    {{--<td>--}}
+                                    </td>
+                                    <td>
                                         {{--{{ $code->day_active != 10 ? $expired[$code->day_active] : '' }}--}}
-                                    {{--</td>--}}
-                                    {{--<td> {{ $code->reason }} </td>--}}
-                                    {{--<td>--}}
+                                    </td>
+                                    <td> </td>
+                                    <td>
                                         {{--@if (isset($code->active) && !empty($code->active))--}}
                                             {{--<p>{{ 'id: ' . $code->active->userId }}</p>--}}
                                             {{--<p>{{ 'email: ' . $code->active->user->email }}</p>--}}
                                             {{--<p>{{ 'username: ' . $code->active->user->username }}</p>--}}
                                         {{--@endif--}}
-                                    {{--</td>--}}
-                                    {{--<td>--}}
-                                        {{--@if (isset($code->purchase) && !empty($code->purchase))--}}
-                                            {{--<p>{{ 'email:' . $code->purchase->email }}</p>--}}
-                                            {{--<p>{{ 'phone:' . $code->purchase->phone }}</p>--}}
-                                            {{--<p>{{ 'name:' . $code->purchase->name }}</p>--}}
-                                        {{--@endif--}}
-                                    {{--</td>--}}
-                                    {{--<td>--}}
-                                        {{--<div class="btn-group btn-group-sm" role="group" style="float: right">--}}
-                                            {{--<button type="button"--}}
-                                                {{--class="btn btn-sm btn-recalled {{ in_array($code->state, [0, 2]) ? 'disabled' : 'btn-primary' }}"--}}
-                                                {{--data-key="{{ $code->serialkey }}">--}}
-                                                {{--Thu hồi--}}
-                                            {{--</button>--}}
-                                        {{--</div>--}}
-                                    {{--</td>--}}
-                                {{--</tr>--}}
-                            {{--@endforeach--}}
+                                    </td>
+                                    <td>
+                                        @if (isset($code->order))
+                                            <p>{{ 'email:' . $code->order->email }}</p>
+                                            <p>{{ 'phone:' . $code->order->phone }}</p>
+                                            <p>{{ 'name:' . $code->order->name }}</p>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm" role="group" style="float: right">
+                                            <button type="button"
+                                                class="btn btn-sm btn-recalled {{ in_array($state, [0, 2]) ? 'disabled' : 'btn-primary' }}"
+                                                data-key="{{ $code->serialkey }}">
+                                                Thu hồi
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
 
                         </tbody>
                     </table>

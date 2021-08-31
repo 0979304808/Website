@@ -24,10 +24,10 @@ class PremiumMaziiRepository extends BaseRepository implements PremiumMaziiRepos
     public function WhereSortFilter($sort, $filter)
     {
         if ($sort == 'old'){
-            $sort = 'desc';
+            $sort = 'asc';
         }
         if ($sort == 'new'){
-            $sort = 'asc';
+            $sort = 'desc';
         }
         if ($filter == 'all'){
             return $this->model->orderBy('premiumId', $sort);

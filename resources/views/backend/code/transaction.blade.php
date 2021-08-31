@@ -55,8 +55,8 @@
                             @foreach ($premiumMazii as $key => $value)
                                 <tr>
                                     <td>{{ $value->userId }}</td>
-                                    <td>{{ $value->user->username }}</td>
-                                    <td>{{ $value->user->email }}</td>
+                                    <td>{{ isset($value->user->username) ? $value->user->username : '' }}</td>
+                                    <td>{{ isset($value->user->email) ? $value->user->email : '' }}</td>
                                     <td>{{ $value->transaction}}
                                     @if ($value->provider == 'card')
                                         <button data-toggle="modal" data-target=".modal_purchase" data-code="{{ $value->transaction }}" class="btn btn-xs btn-primary pull-right purchase_detail">Chi tiết đơn</button>

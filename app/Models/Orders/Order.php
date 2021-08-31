@@ -6,14 +6,9 @@ use App\Models\Codes\Code;
 use App\Models\Projects\Project;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Order extends Model
 {
-    use SoftDeletes;
-
-    const _finish = true;
-    const _unfinish = false;
 
     protected $guarded = [];
 

@@ -32,8 +32,8 @@ class CreateUserSubscribe extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('user_subscribe');
-    }
+//    public function down()
+//    {
+//        Schema::dropIfExists('user_subscribe');
+//    }
 }

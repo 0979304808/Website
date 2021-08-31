@@ -34,17 +34,16 @@ Route::group(['namespace' => 'BackEnd'], function () {
         Route::get('/logout', 'HomeController@logout')->name('backend.logout');
 
 
-
         // Administrator
         Route::group([
             'prefix' => 'auth',
-        ], function(){
+        ], function () {
             // Account
             Route::group([
                 'prefix' => 'accounts',
                 'namespace' => 'Auth',
                 'middleware' => ['role:administrator']
-            ], function(){
+            ], function () {
                 Route::get('/', 'AccountController@list')->name('backend.account');
                 Route::put('/', 'AccountController@active')->name('backend.account.active');
                 Route::put('update-role', 'AccountController@updateRoleAdmin')->name('backend.account.update.role');
@@ -56,7 +55,7 @@ Route::group(['namespace' => 'BackEnd'], function () {
                 'prefix' => 'roles',
                 'namespace' => 'Auth',
                 'middleware' => ['role:administrator']
-            ], function(){
+            ], function () {
                 Route::get('/', 'RoleController@list')->name('backend.role');
                 Route::post('/', 'RoleController@create')->name('backend.role.create');
                 Route::put('add-permission', 'RoleController@addPermissionToRole')->name('backend.role.add.permission');
@@ -68,7 +67,7 @@ Route::group(['namespace' => 'BackEnd'], function () {
                 'prefix' => 'permissions',
                 'namespace' => 'Auth',
                 'middleware' => ['role:administrator']
-            ], function(){
+            ], function () {
                 Route::get('/', 'PermissionController@list')->name('backend.permission');
                 Route::post('/', 'PermissionController@create')->name('backend.permission.create');
             });
@@ -77,11 +76,11 @@ Route::group(['namespace' => 'BackEnd'], function () {
             Route::group([
                 'prefix' => 'profile',
                 'namespace' => 'Admins'
-            ], function(){
+            ], function () {
                 Route::group([
                     'prefix' => '{admin}',
                     'where' => ['admin', '[0-9]+']
-                ], function(){
+                ], function () {
                     Route::get('/', 'AdminController@profile')->name('backend.profile');
                     Route::put('image', 'AdminController@updateImage')->name('backend.profile.image');
                     Route::put('update', 'AdminController@updateProfile')->name('backend.profile.update');
@@ -96,15 +95,15 @@ Route::group(['namespace' => 'BackEnd'], function () {
             'prefix' => 'post',
             'namespace' => 'Posts',
             'middleware' => ['role:administrator|manager|editor']
-        ],function (){
+        ], function () {
 
-            Route::get('/','PostController@list')->name('backend.post');
-            Route::put('/category','PostController@UpdatePostCategory')->name('backend.post.category');
-            Route::put('/tag','PostController@UpdatePostTag')->name('backend.post.tag');
-            Route::delete('/delete','PostController@delete')->name('backend.post.delete');
+            Route::get('/', 'PostController@list')->name('backend.post');
+            Route::put('/category', 'PostController@UpdatePostCategory')->name('backend.post.category');
+            Route::put('/tag', 'PostController@UpdatePostTag')->name('backend.post.tag');
+            Route::delete('/delete', 'PostController@delete')->name('backend.post.delete');
 
-            Route::get('/create','PostController@form')->name('backend.post.form');
-            Route::post('/create','PostController@create')->name('backend.post.create');
+            Route::get('/create', 'PostController@form')->name('backend.post.form');
+            Route::post('/create', 'PostController@create')->name('backend.post.create');
 
         });
 
@@ -112,11 +111,11 @@ Route::group(['namespace' => 'BackEnd'], function () {
         Route::group([
             'prefix' => 'category',
             'namespace' => 'Categories'
-        ],function (){
+        ], function () {
 
-            Route::get('/','CategoryController@list')->name('backend.category');
-            Route::post('/create','CategoryController@createOrupdate')->name('backend.category.create');
-            Route::delete('/delete','CategoryController@delete')->name('backend.category.delete');
+            Route::get('/', 'CategoryController@list')->name('backend.category');
+            Route::post('/create', 'CategoryController@createOrupdate')->name('backend.category.create');
+            Route::delete('/delete', 'CategoryController@delete')->name('backend.category.delete');
 
         });
 
@@ -124,11 +123,11 @@ Route::group(['namespace' => 'BackEnd'], function () {
         Route::group([
             'prefix' => 'tag',
             'namespace' => 'Tags'
-        ],function (){
+        ], function () {
 
-            Route::get('/','TagController@list')->name('backend.tag');
-            Route::post('/create','TagController@createOrupdate')->name('backend.tag.create');
-            Route::delete('/delete','TagController@delete')->name('backend.tag.delete');
+            Route::get('/', 'TagController@list')->name('backend.tag');
+            Route::post('/create', 'TagController@createOrupdate')->name('backend.tag.create');
+            Route::delete('/delete', 'TagController@delete')->name('backend.tag.delete');
 
         });
 
@@ -137,11 +136,11 @@ Route::group(['namespace' => 'BackEnd'], function () {
             'prefix' => 'code',
             'namespace' => 'Code',
             'middleware' => ['role:administrator']
-        ], function(){
+        ], function () {
             Route::get('/transaction', 'CodeController@transaction')->name('backend.code.transaction');
-            Route::get('/codesended','CodeController@codesended')->name('backend.code.codesended');
-            Route::get('/codepurchase','CodeController@codepurchase')->name('backend.code.getcodepurchase');
-            Route::post('/recalled','CodeController@recalled')->name('backend.code.recalled');
+            Route::get('/codesended', 'CodeController@codesended')->name('backend.code.codesended');
+            Route::get('/codepurchase', 'CodeController@codepurchase')->name('backend.code.getcodepurchase');
+            Route::post('/recalled', 'CodeController@recalled')->name('backend.code.recalled');
 
         });
 
@@ -150,11 +149,45 @@ Route::group(['namespace' => 'BackEnd'], function () {
             'prefix' => 'user',
             'namespace' => 'Users',
             'middleware' => ['role:administrator']
-        ], function(){
+        ], function () {
             Route::get('/usersubscribe', 'UserController@usersubscribe')->name('backend.user.usersubscribe');
         });
 
 
-    });
+        // Social
+        Route::group([
+            'prefix' => 'social',
+            'namespace' => 'Socials',
+            'middleware' => ['role:administrator|manager']
+        ], function () {
 
+
+            // Account
+            Route::group([
+                'prefix' => 'accounts'
+            ], function () {
+                Route::get('/', 'AccountController@index')->name('backend.social.account');
+                Route::post('/', 'AccountController@create')->name('backend.social.account.create');
+                Route::delete('/', 'AccountController@delete')->name('backend.social.account.delete');
+            });
+
+            // JLPT
+            Route::group([
+                'prefix' => 'jlpt'
+            ], function () {
+                Route::get('/', 'JlptController@index')->name('backend.social.jlpt.index');
+                Route::get('/create', 'JlptController@create')->name('backend.social.jlpt.create');
+                Route::post('/store', 'JlptController@createOrUpdate')->name('backend.social.jlpt.store');
+                Route::delete('/delete', 'JlptController@delete')->name('backend.social.jlpt.delete');
+            });
+        });
+
+    });
 });
+
+
+//routes for ckeditor
+Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
+    ->name('ckfinder_connector');
+Route::any('/ckfinder/browser', '\CKSource\CKFinderBridge\Controller\CKFinderController@browserAction')
+    ->name('ckfinder_browser');

@@ -32,8 +32,8 @@ class CreateSerial extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('serial');
-    }
+//    public function down()
+//    {
+//        Schema::dropIfExists('serial');
+//    }
 }

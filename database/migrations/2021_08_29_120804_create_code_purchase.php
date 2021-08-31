@@ -43,8 +43,8 @@ class CreateCodePurchase extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('code_purchase');
-    }
+//    public function down()
+//    {
+//        Schema::dropIfExists('code_purchase');
+//    }
 }

@@ -60,7 +60,6 @@ class CodeController extends Controller
             'url_transaction' => route('backend.code.transaction'),
             'url_get_purchase' => route('backend.code.getcodepurchase')
         ]);
-
         $view = view('backend.code.transaction');
         $view->with('premiumMazii', $premiumMazii);
         $view->with('providers', $providers);
@@ -74,27 +73,19 @@ class CodeController extends Controller
         $code = convert_vi_to_en(str_replace(' ', '', $request->get('code', null)));
         $sort = $request->get('sort', 'new');
 
-        if ($status != null && $sort != null) {
-            $codes = $this->code->WhereStatusSort($status, $sort);
-        }else {
+//        if ($status != null && $sort != null) {
+//            $codes = $this->code->WhereStatusSort($status, $sort);
+//        }
+//        if ($code != null ){
+//            $codes = $this->code->search($code);
+//        }
+        if (!isset($codes)){
             $codes = $this->code->withAll();
         }
-        dd($codes);
-
-        $views = view('backend.code.codesended');
-        $views->with('codes',$codes);
-        return $views;
-
-
-        $query_string = [
-            'page' => '{page}',
-            'status' => $status,
-            'sort' => $sort,
-        ];
-        $link = make_url_pagi($request->url(), $query_string);
-
-        $paging = paging($link, $list_codes->total, $page, $limit);
-
+//        JavaScript::put([
+//            'url_codesended' => route('backend.code.codesended'),
+//            'url_recalled' => route('backend.code.recalled')
+//        ]);
         $expired = [
             '7' => '7 ngày',
             '30' => '1 tháng',
@@ -110,12 +101,11 @@ class CodeController extends Controller
             '1' => 'Đã gửi',
             '2' => 'Đã kích hoạt',
         ];
-        JavaScript::put([
-            'url_codesended' => route('backend.code.codesended'),
-            'url_recalled' => route('backend.code.recalled')
-        ]);
 
-        return view('backend.code.codesended', compact(['paging', 'state', 'expired', 'list_codes', 'page', 'status', 'code', 'sort', 'from_stt_of_view']));
+        $views = view('backend.code.codesended');
+        $views->with('codes',$codes);
+        $views->with('state',$state);
+        return $views;
     }
 
     // Table code_purchase

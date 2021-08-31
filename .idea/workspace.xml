@@ -1,59 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Admins/AdminController.php" description="&#10;//            $guard-&gt;update($attributes);&#10;//    ..." line="28" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="7c87681d-158e-4117-9f6f-8259113b6644" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Codes/CodeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Codes/Contract/CodeRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Premiums/Contract/PremiumMaziiRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Premiums/PremiumMaziiRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Purchase/Contract/MaziiPurchaseRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Purchase/MaziiPurchaseRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Serial/Contract/SerialRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Serial/SerialRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Socials/JlptController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Jlpt/Contract/JlptRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Jlpt/JlptRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Languages/Contract/LanguageRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Languages/LanguageRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/UserMazii/Contract/UserMaziiRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/UserMazii/UserMaziiRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/access.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Core/Repositories/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Repositories/BaseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Core/Repositories/Contract/BaseRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Repositories/Contract/BaseRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Admins/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Admins/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Auth/PermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Auth/PermissionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Categories/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Categories/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Code/CodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Code/CodeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Posts/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Posts/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Tags/TagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Tags/TagController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Users/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Users/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Users/UserSubscribe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Users/UserSubscribe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Account/CreateAccountRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Account/CreateAccountRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Codes/Code.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Codes/Code.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Orders/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Orders/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Users/UserMazii.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Users/UserMazii.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Admins/AdminRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Admins/AdminRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Admins/Contract/AdminRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Admins/Contract/AdminRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Categories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Categories/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Categories/Contract/CategoryRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Categories/Contract/CategoryRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Codes/CodePurchaseRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Codes/Contract/CodePurchaseRepositoryInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Permissions/Contract/PermissionRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Permissions/Contract/PermissionRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Permissions/PermissionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Permissions/PermissionRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Posts/Contract/PostRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Posts/Contract/PostRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Codes/CodeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Codes/CodeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Premiums/PremiumMaziiRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Premiums/PremiumMaziiRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Profile/Contract/ProfileRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Profile/Contract/ProfileRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Profile/ProfileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Profile/ProfileRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Roles/Contract/RoleRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Roles/Contract/RoleRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Roles/RoleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Roles/RoleRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Tags/Contract/TagRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Tags/Contract/TagRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Users/Contract/UserSubscribeRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Users/Contract/UserSubscribeRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Users/UserSubscribeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Users/UserSubscribeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Utilities/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utilities/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_08_25_112701_create_admins_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_08_25_112701_create_admins_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backend/js/code/codesended.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/js/code/codesended.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backend/js/code/transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/js/code/transaction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630281545.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_08_25_113025_laratrust_setup_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_08_25_113025_laratrust_setup_tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_08_29_120804_create_code_purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_08_29_120804_create_code_purchase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_08_29_162754_create_user_subscribe.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_08_29_162754_create_user_subscribe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_08_30_081106_create_serial.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_08_30_081106_create_serial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630136877.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630136931.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630137368.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630137445.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630157693.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630157710.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630157718.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630157724.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630157730.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630157737.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630157747.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630157753.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630157757.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630243644.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630253443.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630253921.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630281878.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630284473.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630309980.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/Thumb_image_1630312114.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/code/codesended.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/code/codesended.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/code/transaction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/code/transaction.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/usersubscribe.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/users/usersubscribe.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/includes/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,68 +71,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/social/account.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/backend/js/social/account.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="73" column="35" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/social/jlpt/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/backend/js/posts/updateAnddelete.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="25" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Socials/AccountController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-561">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="180" column="102" selection-start-line="180" selection-start-column="102" selection-end-line="180" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Socials/JlptController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-73">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+              <folding>
+                <element signature="e#56#89#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Code/CodeController.php">
+        <entry file="file://$PROJECT_DIR$/app/Core/Repositories/BaseRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="79" column="44" lean-forward="true" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+            <state relative-caret-position="423">
+              <caret line="179" column="18" lean-forward="true" selection-start-line="179" selection-start-column="18" selection-end-line="179" selection-end-column="18" />
               <folding>
-                <element signature="e#53#87#0#PHP" expanded="true" />
+                <element signature="e#41#100#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/code/codesended.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/Jlpt/JlptRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="47" column="30" selection-start-line="47" selection-end-line="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Codes/Contract/CodeRepositoryInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Codes/CodeRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="35" />
+            <state relative-caret-position="307">
+              <caret line="34" selection-start-line="34" selection-end-line="38" selection-end-column="9" />
               <folding>
-                <element signature="e#42#68#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Codes/Code.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <element signature="e#36#64#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/code/transaction.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="71" column="130" selection-start-line="71" selection-start-column="130" selection-end-line="71" selection-end-column="130" />
-              <folding>
-                <element signature="e#183#242#0#HTML" expanded="true" />
-                <element signature="e#4351#4371#0#HTML" expanded="true" />
+                <element signature="e#41#82#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,14 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>JavaScriptServiceProvider</find>
-      <find>JavaScript</find>
-      <find>link_update_permission_role</find>
-      <find>backend.role.add.permission</find>
-      <find>roles</find>
-      <find>updatePermissionAdmin</find>
-      <find>profile</find>
-      <find>model</find>
       <find>btn-delete-role</find>
       <find>btn-save-change-role-admin</find>
       <find>btn-save-change-permission</find>
@@ -175,6 +199,14 @@
       <find>categories</find>
       <find>make_url_pagi</find>
       <find>url_codesended</find>
+      <find>status</find>
+      <find>jlpt</find>
+      <find>with</find>
+      <find>url_delete_jlpt</find>
+      <find>ADMIN_PASSWORD</find>
+      <find>username</find>
+      <find>delete</find>
+      <find>record_jlpt</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -186,57 +218,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/backend/users/usersubscribe.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Categories/CategoryController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Auth/PermissionController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Tags/TagController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Auth/RegisterController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Admins/AdminController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Admins/Contract/AdminRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Admins/AdminRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Categories/Contract/CategoryRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Categories/CategoryRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Codes/CodePurchaseRepository.php" />
-        <option value="$PROJECT_DIR$/app/Core/Repositories/BaseRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Codes/Contract/CodePurchaseRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Permissions/Contract/PermissionRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Permissions/PermissionRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Posts/Contract/PostRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Profile/Contract/ProfileRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Profile/ProfileRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Roles/Contract/RoleRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Roles/RoleRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Serial/Contract/SerialRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Serial/SerialRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Tags/Contract/TagRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Users/Contract/UserSubscribeRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Users/UserSubscribeRepository.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_08_30_081106_create_serial.php" />
-        <option value="$PROJECT_DIR$/app/Models/Serial/Serial.php" />
-        <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Models/Users/UserSubscribe.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Premiums/Contract/PremiumRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Premiums/PremiumRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Premiums/Contract/PremiumMaziiRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Posts/PostController.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Purchase/Contract/MaziiPurchaseRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Models/Purchase/MaziiPurchase.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Purchase/MaziiPurchaseRepository.php" />
-        <option value="$PROJECT_DIR$/public/backend/js/code/transaction.js" />
-        <option value="$PROJECT_DIR$/app/Repositories/Premiums/PremiumMaziiRepository.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/code/transaction.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Premiums/PremiumMazii.php" />
-        <option value="$PROJECT_DIR$/app/Models/Orders/Order.php" />
-        <option value="$PROJECT_DIR$/app/Models/Projects/Project.php" />
-        <option value="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Codes/CodeRepository.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Codes/Contract/CodeRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/code/codesended.blade.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Premiums/PremiumMaziiRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Admins/AdminController.php" />
+        <option value="$PROJECT_DIR$/app/Models/Orders/Order.php" />
         <option value="$PROJECT_DIR$/app/Models/Codes/Code.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Codes/CodeRepository.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/code/codesended.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_08_31_025530_create_jlpt_info.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_08_29_120804_create_code_purchase.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_08_29_162754_create_user_subscribe.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_08_30_081106_create_serial.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_08_25_112701_create_admins_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_08_25_113025_laratrust_setup_tables.php" />
+        <option value="$PROJECT_DIR$/app/Models/Socicals/JLPT.php" />
+        <option value="$PROJECT_DIR$/app/Models/Socials/Language.php" />
+        <option value="$PROJECT_DIR$/app/Models/Socials/JLPT.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Languages/Contract/LanguageRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Languages/LanguageRepository.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Jlpt/Contract/JlptRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/public/backend/js/social/jlpt/index.js" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Jlpts/CreateJlptRequest.php" />
+        <option value="$PROJECT_DIR$/public/backend/js/social/jlpt/create.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Social/JlptController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/includes/menu.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Socials/Account.php" />
+        <option value="$PROJECT_DIR$/app/Models/Socials/Profile.php" />
+        <option value="$PROJECT_DIR$/app/Models/Users/UserMazii.php" />
+        <option value="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/CustomCKFinderAuth.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/resources/views/backend/social/jlpt/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Jlpt/JlptRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Socials/JlptController.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/UserMazii/Contract/UserMaziiRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/UserMazii/UserMaziiRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Account/CreateAccountRequest.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/access.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Profile/Contract/ProfileRepositoryInterface.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Code/CodeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/social/jlpt/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/code/transaction.blade.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Profile/ProfileRepository.php" />
+        <option value="$PROJECT_DIR$/public/backend/js/social/account.js" />
+        <option value="$PROJECT_DIR$/resources/views/backend/social/account.blade.php" />
+        <option value="$PROJECT_DIR$/app/Core/Repositories/Contract/BaseRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Socials/AccountController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Core/Repositories/BaseRepository.php" />
       </list>
     </option>
   </component>
@@ -337,14 +369,26 @@
       <path value="$PROJECT_DIR$/vendor/laracasts/utilities" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-aws-s3-v3" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-cached-adapter" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/aws/aws-sdk-php" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/spatie/flysystem-dropbox" />
+      <path value="$PROJECT_DIR$/vendor/spatie/dropbox-api" />
+      <path value="$PROJECT_DIR$/vendor/ckfinder/ckfinder-laravel-package" />
+      <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/guzzle-factory" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="127" />
-    <option name="y" value="67" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="126" />
+    <option name="y" value="66" />
     <option name="width" value="1630" />
     <option name="height" value="1040" />
   </component>
@@ -353,7 +397,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -365,6 +408,27 @@
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
               <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="Contract" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
@@ -391,34 +455,10 @@
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
               <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-              <item name="Codes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-              <item name="Orders" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-              <item name="Projects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="Socials" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
@@ -431,22 +471,7 @@
               <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="Codes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="Codes" type="462c0819:PsiDirectoryNode" />
-              <item name="Contract" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="Premiums" type="462c0819:PsiDirectoryNode" />
+              <item name="Jlpt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
@@ -477,6 +502,22 @@
             <path>
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
               <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="social" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -498,12 +539,35 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="social" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="social" type="462c0819:PsiDirectoryNode" />
+              <item name="jlpt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -515,11 +579,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\eup\Website\app\Http\Controllers\BackEnd\Socials" />
       <recent name="D:\laragon\www\eup\Website\public\vendors" />
       <recent name="D:\laragon\www\eup\Website\resources\views\backend\posts" />
       <recent name="D:\laragon\www\eup\Website\app\Http\Requests" />
       <recent name="D:\laragon\www\eup\Website\app\Http\Requests\Account" />
-      <recent name="D:\laragon\www\eup\Website\resources\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -554,23 +618,24 @@
       <workItem from="1629888550509" duration="1832000" />
       <workItem from="1629890692244" duration="33483000" />
       <workItem from="1630022574868" duration="27046000" />
-      <workItem from="1630074679312" duration="38760000" />
+      <workItem from="1630074679312" duration="38858000" />
+      <workItem from="1630335870902" duration="35887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102074000" />
+    <option name="totallyTimeSpent" value="138059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2080537" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16577181" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -580,7 +645,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5033557" side_tool="true" weight="0.058073655" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4966443" visible="true" weight="0.058073655" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4966443" weight="0.407932" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -591,396 +656,365 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Categories/CategoryRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Languages/Contract/LanguageRepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="34">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Core/Repositories/Contract/BaseRepositoryInterface.php">
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Languages/LanguageRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Permissions/Contract/PermissionRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Profile/Contract/ProfileRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Profile/ProfileRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Roles/Contract/RoleRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Roles/RoleRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Serial/Contract/SerialRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Tags/Contract/TagRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Tags/TagRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Users/Contract/UserSubscribeRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Users/UserSubscribeRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="34">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
           <folding>
-            <element signature="e#42#83#0#PHP" expanded="true" />
+            <element signature="e#48#89#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <element signature="e#23#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/users/usersubscribe.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_08_30_081106_create_serial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Serial/Serial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="70" column="57" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Users/UserSubscribe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Users/UserMazii.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Premiums/Contract/PremiumRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="true" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Premiums/Contract/PremiumMaziiRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Premiums/PremiumRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" lean-forward="true" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="e#45#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Core/Repositories/BaseRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-471">
-          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Posts/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="71" selection-start-line="71" selection-end-line="74" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Serial/SerialRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="e#43#84#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="46" column="5" selection-end-line="74" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Posts/Contract/PostRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="323">
+          <caret line="5089" column="4" selection-start-line="5089" selection-start-column="4" selection-end-line="5089" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/Permissions/PermissionRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <caret line="22" column="1" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Purchase/MaziiPurchaseRepository.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/social/jlpt/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="731">
+          <caret line="43" column="103" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backend/js/social/jlpt/edit.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Jlpt/Contract/JlptRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Social/JlptController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
           <folding>
-            <element signature="e#45#83#0#PHP" expanded="true" />
+            <element signature="e#55#101#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/backend/js/code/transaction.js">
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/includes/menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="46" column="99" selection-start-line="46" selection-start-column="99" selection-end-line="46" selection-end-column="99" />
+        <state relative-caret-position="153">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Premiums/Contract/PremiumMaziiRepositoryInterface.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Jlpts/CreateJlptRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="-5">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Purchase/Contract/MaziiPurchaseRepositoryInterface.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Socials/Language.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Socials/Account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="33" />
+          <folding>
+            <element signature="e#38#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Users/Contract/UserSubscribeRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Users/UserSubscribeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="24" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CustomCKFinderAuth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/social/jlpt/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Socials/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/UserMazii/UserMaziiRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Users/UserMazii.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="e#36#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/UserMazii/Contract/UserMaziiRepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Purchase/MaziiPurchase.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Accounts/CreateAccountRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Auth/RegisterRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="e#40#79#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Premiums/PremiumPackageCountry.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Account/CreateAccountRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="391">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Premiums/PremiumMazii.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#39#70#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" column="14" selection-start-line="7" selection-end-line="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Premiums/PremiumPackage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Orders/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#37#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Codes/CodePurchaseRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="5" lean-forward="true" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Codes/Contract/CodePurchaseRepositoryInterface.php">
+    <entry file="file://$PROJECT_DIR$/config/access.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="1" lean-forward="true" selection-end-line="13" selection-end-column="1" />
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Premiums/PremiumMaziiRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="e#45#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Codes/CodePurchase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Projects/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="26" />
-          <folding>
-            <element signature="e#39#67#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="27" selection-start-line="27" selection-end-line="31" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/code/transaction.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="71" column="130" selection-start-line="71" selection-start-column="130" selection-end-line="71" selection-end-column="130" />
-          <folding>
-            <element signature="e#183#242#0#HTML" expanded="true" />
-            <element signature="e#4351#4371#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="287">
+          <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Codes/CodeRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Profile/Contract/ProfileRepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="35" />
-          <folding>
-            <element signature="e#42#68#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Codes/Contract/CodeRepositoryInterface.php">
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Profile/ProfileRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/code/codesended.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="47" column="30" selection-start-line="47" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Codes/Code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="301">
           <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
-            <element signature="e#36#64#0#PHP" expanded="true" />
+            <element signature="e#44#85#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Posts/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="120" column="42" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Code/CodeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="79" column="44" lean-forward="true" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+        <state relative-caret-position="901">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/code/codesended.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/posts/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="74" selection-end-column="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="779" column="13" selection-start-line="779" selection-start-column="13" selection-end-line="779" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backend/js/code/transaction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-413" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backend/js/social/jlpt/create.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backend/js/social/jlpt/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Core/Repositories/Contract/BaseRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="80" column="54" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Socials/JlptController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
-            <element signature="e#53#87#0#PHP" expanded="true" />
+            <element signature="e#56#89#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BackEnd/Socials/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="180" column="102" selection-start-line="180" selection-start-column="102" selection-end-line="180" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backend/js/posts/updateAnddelete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/social/jlpt/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backend/js/social/account.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="73" column="35" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/social/account.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Jlpt/JlptRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="34" selection-start-line="34" selection-end-line="38" selection-end-column="9" />
+          <folding>
+            <element signature="e#41#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Core/Repositories/BaseRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="179" column="18" lean-forward="true" selection-start-line="179" selection-start-column="18" selection-end-line="179" selection-end-column="18" />
+          <folding>
+            <element signature="e#41#100#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

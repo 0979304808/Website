@@ -10,11 +10,12 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Input;
 
-class BaseRepository implements BaseRepositoryInterface {
+class BaseRepository implements BaseRepositoryInterface
+{
 
     use UploadTable;
     use Helpful;
-    
+
     /**
      * @var Model
      */
@@ -37,7 +38,7 @@ class BaseRepository implements BaseRepositoryInterface {
     {
         return $this->model->create($attributes);
     }
-    
+
     /**
      * @param array $attributes
      * @return mixed
@@ -62,9 +63,9 @@ class BaseRepository implements BaseRepositoryInterface {
      */
     public function delete()
     {
-        try{
+        try {
             return $this->model->delete();
-        }catch(Exception $e){
+        } catch (Exception $e) {
             throw new HttpResponseException(response()->json($e->getMessage()), 422);
         }
     }
@@ -75,7 +76,7 @@ class BaseRepository implements BaseRepositoryInterface {
      * @param string $sortBy
      * @return mixed
      */
-    public function all($columns =  ['*'], string $orderBy = 'id', string $sortBy = 'asc')
+    public function all($columns = ['*'], string $orderBy = 'id', string $sortBy = 'asc')
     {
         return $this->model->orderBy($orderBy, $sortBy)->get($columns);
     }
@@ -149,10 +150,36 @@ class BaseRepository implements BaseRepositoryInterface {
      * Paginate arrays
      * @param $path
      */
-    public function Unlink($path){
-        if($path != null ){
-            if(\File::exists('uploads/images/'.basename($path))){
-               return unlink('uploads/images/'.basename($path));
+    public function Unlink($path)
+    {
+        if ($path != null) {
+            if (\File::exists('uploads/images/' . basename($path))) {
+                return unlink('uploads/images/' . basename($path));
+            }
+        }
+    }
+
+    public function deleteId($id)
+    {
+        if ($id){
+            $model = $this->model->find($id);
+            if ($model){
+                return $model->delete();
+            }
+        }
+    }
+
+    public function deleteAttribute(array $attribute)
+    {
+        if ($attribute){
+            $model = $this->findOneBy($attribute);
+            if ($model){
+                if (isset($model->image)){
+                    if ($model->image != null ){
+                        $this->Unlink($model->image);
+                    }
+                }
+                return $model->delete();
             }
         }
     }

@@ -31,7 +31,7 @@ class CodeRepository extends BaseRepository implements CodeRepositoryInterface
         if ($sort == 'new'){
             $sort = 'asc';
         }
-        return $this->model->where('status', $status)->orderBy('id', $sort);
+        return $this->model->where('status', $status)->orderBy('id', $sort)->paginate();
     }
 
     public function search($search)

@@ -1,15 +1,16 @@
-<?php 
+<?php
 
 namespace App\Core\Repositories\Contract;
 
-interface BaseRepositoryInterface {
+interface BaseRepositoryInterface
+{
 
     /**
      * @param array $attributes
      * @return mixed
      */
     public function create(array $attributes);
-    
+
     /**
      * @param array $attributes
      * @return mixed
@@ -33,7 +34,7 @@ interface BaseRepositoryInterface {
      * @param string $sortBy
      * @return mixed
      */
-    public function all($columns =  ['*'], string $orderBy = 'id', string $sortBy = 'asc');
+    public function all($columns = ['*'], string $orderBy = 'id', string $sortBy = 'asc');
 
     /**
      * @param $id
@@ -47,7 +48,7 @@ interface BaseRepositoryInterface {
      */
     public function findBy(array $data);
 
-    
+
     /**
      * @param array $data
      * @return mixed
@@ -59,7 +60,7 @@ interface BaseRepositoryInterface {
      * @return mixed
      */
     public function findOneOrFail($id);
-    
+
     /**
      * @param array $data
      * @return mixed
@@ -74,4 +75,9 @@ interface BaseRepositoryInterface {
     public function paginateArrayResults(array $data, int $perPage = 20);
 
     public function Unlink($path);
+
+    public function deleteId($id);
+
+    public function deleteAttribute(array $attribute);
+
 }

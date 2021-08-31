@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 class Code extends Model
 {
 
-    const _lifetime = '10 years';
     protected $table = 'codes';
     protected $guarded = [];
 
