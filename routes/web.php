@@ -182,6 +182,23 @@ Route::group(['namespace' => 'BackEnd'], function () {
             });
         });
 
+
+        // Job
+        Route::group([
+            'prefix' => 'job',
+            'namespace' => 'Jobs',
+            'middleware' => ['role:administrator']
+        ], function () {
+            Route::get('/', 'JobController@index')->name('backend.job.index');
+            Route::get('/detail/{job}', 'JobController@detail')->name('backend.job.detail');
+            Route::get('/active', 'JobController@active')->name('backend.job.active');
+            Route::delete('/delete', 'JobController@delete')->name('backend.job.delete');
+            Route::post('/activeAll', 'JobController@activeAll')->name('backend.job.activeAll');
+        });
+
+
+
+
     });
 });
 

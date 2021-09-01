@@ -33,6 +33,8 @@ use App\Repositories\UserMazii\Contract\UserMaziiRepositoryInterface;
 use App\Repositories\UserMazii\UserMaziiRepository;
 use App\Repositories\Profile\Contract\ProfileRepositoryInterface;
 use App\Repositories\Profile\ProfileRepository;
+use App\Repositories\Jobs\Contract\JobRepositoryInterface;
+use App\Repositories\Jobs\JobRepository;
 
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -103,6 +105,10 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             ProfileRepositoryInterface::class,
             ProfileRepository::class
+        );
+        $this->app->bind(
+            JobRepositoryInterface::class,
+            JobRepository::class
         );
 
     }

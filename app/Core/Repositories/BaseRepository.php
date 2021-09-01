@@ -164,7 +164,9 @@ class BaseRepository implements BaseRepositoryInterface
         if ($id){
             $model = $this->model->find($id);
             if ($model){
-                return $model->delete();
+                if ($model->delete()){
+                    return $model;
+                }
             }
         }
     }

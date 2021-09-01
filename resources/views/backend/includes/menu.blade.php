@@ -63,6 +63,13 @@
                         </li>
                     </ul>
                 </li>
+                <li class="{{ Request::is('job') ? 'active' : '' }}"><a><i class="fa fa-folder-open-o" aria-hidden="true"></i> Quản lý Jobbs <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li class="{{ Request::is('job') ? 'active' : '' }}">
+                            <a href="{{ route('backend.job.index') }}">Danh sách công việc</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     @endrole

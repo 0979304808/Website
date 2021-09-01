@@ -133,4 +133,25 @@ return [
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
 
+    'footer' => [
+        'default' => "<br />_____________________________________<br /><br />
+			<strong>Mazii - Từ điển tiếng Nhật cho người Việt</strong><br /><br />
+			Link website: <a href='https://mazii.net'>https://mazii.net</a><br />
+			Link Tải IOS: <a href='https://goo.gl/izv9L1'>https://goo.gl/izv9L1</a><br />
+			Link Tải Android: <a href='https://goo.gl/azLez2'>https://goo.gl/azLez2</a><br />
+			Dịch Trên Mọi Website: <a href='https://goo.gl/btCFf8'>https://goo.gl/btCFf8</a><br />
+			Email: support@mazii.net <br />
+			Fanpage: <a href='https://www.facebook.com/maziinet'>https://www.facebook.com/maziinet</a><br />
+			Điện Thoại: (+84) 377738144",
+        'en' => "<br />_____________________________________<br /><br />
+			<strong>Mazii - Japanese dictionary for everyone</strong><br /><br />
+			Link Website: <a href='https://mazii.net'>https://mazii.net</a><br />
+			Link Download IOS: <a href='https://goo.gl/izv9L1'>https://goo.gl/izv9L1</a><br />
+			Link Download Android: <a href='https://goo.gl/azLez2'>https://goo.gl/azLez2</a><br />
+			Extension: <a href='https://goo.gl/btCFf8'>https://goo.gl/btCFf8</a><br />
+			Email: support@mazii.net <br />
+			Fanpage: <a href='https://www.facebook.com/maziinet'>https://www.facebook.com/maziinet</a><br />
+			Phone: (+84) 377738144"
+    ],
+
 ];

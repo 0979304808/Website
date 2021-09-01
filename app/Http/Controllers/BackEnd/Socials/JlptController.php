@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackEnd\Socials;
 
 use App\Core\Traits\ApiResponser;
 use App\Http\Requests\Jlpts\CreateJlptRequest;
+use App\Models\Posts\Post;
 use App\Repositories\Jlpt\Contract\JlptRepositoryInterface;
 use App\Repositories\Languages\Contract\LanguageRepositoryInterface;
 use Illuminate\Http\Request;
