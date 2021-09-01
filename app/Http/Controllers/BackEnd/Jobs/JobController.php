@@ -50,7 +50,7 @@ class JobController extends Controller
             'list_country' => $list_country,
             'list_province' => $list_province,
         ]);
-        $jobs = $jobs->paginate();
+        $jobs = $jobs->orderBy('id','desc')->paginate();
         $views = view('backend.jobs.index');
         $views->with('jobs', $jobs);
         $views->with('list_country', $list_country);
