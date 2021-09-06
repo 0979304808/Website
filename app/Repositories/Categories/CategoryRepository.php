@@ -2,8 +2,8 @@
 
 namespace App\Repositories\Categories;
 
-use App\Models\Categories\Category;
 use App\Core\Repositories\BaseRepository;
+use App\Models\Socials\Category;
 use App\Repositories\Categories\Contract\CategoryRepositoryInterface;
 
 class CategoryRepository extends BaseRepository implements CategoryRepositoryInterface

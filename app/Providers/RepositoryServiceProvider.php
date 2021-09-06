@@ -35,6 +35,11 @@ use App\Repositories\Profile\Contract\ProfileRepositoryInterface;
 use App\Repositories\Profile\ProfileRepository;
 use App\Repositories\Jobs\Contract\JobRepositoryInterface;
 use App\Repositories\Jobs\JobRepository;
+use App\Repositories\Comments\Contract\CommentRepositoryInterface;
+use App\Repositories\Comments\CommentRepository;
+use App\Repositories\ChildComments\Contract\ChildCommentRepositoryInterface;
+use App\Repositories\ChildComments\ChildCommentRepository;
+
 
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -109,6 +114,14 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             JobRepositoryInterface::class,
             JobRepository::class
+        );
+        $this->app->bind(
+            CommentRepositoryInterface::class,
+            CommentRepository::class
+        );
+        $this->app->bind(
+            ChildCommentRepositoryInterface::class,
+            ChildCommentRepository::class
         );
 
     }

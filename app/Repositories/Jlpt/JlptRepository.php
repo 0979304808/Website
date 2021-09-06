@@ -19,7 +19,6 @@ class JlptRepository extends BaseRepository implements JlptRepositoryInterface
         parent::__construct($jlpt);
         $this->model = $jlpt;
     }
-
     public function WithAll()
     {
         return $this->model->with('admin');

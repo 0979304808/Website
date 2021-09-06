@@ -30,9 +30,9 @@ class PremiumMaziiRepository extends BaseRepository implements PremiumMaziiRepos
             $sort = 'desc';
         }
         if ($filter == 'all'){
-            return $this->model->orderBy('premiumId', $sort);
+            return $this->model->orderBy('created_at', $sort);
         }
-        return $this->model->where('provider', $filter)->orderBy('premiumId', $sort);
+        return $this->model->where('provider', $filter)->orderBy('created_at', $sort);
     }
 
     public function search($search)

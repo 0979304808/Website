@@ -34,7 +34,7 @@
                                 <td>
                                     <img src="{{ isset($value->profile->image) ? $value->profile->image : url('images/default.png') }}" alt="" width="100px" height="100px">
                                 </td>
-                                <td>{{ $value->language->name }}</td>
+                                <td>{{ isset($value->language->name) ? $value->language->name : 'Chưa có' }}</td>
                                 <td>
                                     <a type="button" class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></a>
                                     <button type="button" class="btn btn-sm btn-danger btn-delete-user"  data-key="{{ $key }}" data-id="{{ $value->userId }}"><i class="fa fa-trash-o"></i></button>
@@ -45,7 +45,7 @@
                 </table>
             </div>
             <!--Phân trang-->
-            {{-- @include('backend.includes.pagination', ['data' => $admins, 'appended' => ['search' => Request::get('search'), 'role' => $params['role']]]) --}}
+            {{ $userMazii->links() }}
         </div>
     </div>
 </div>

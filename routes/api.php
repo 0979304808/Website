@@ -21,3 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('/codepurchase','BackEnd\Code\CodeController@codepurchase');
+
+Route::post('/create', 'BackEnd\Socials\PostController@createOrUpdate')->name('backend.social.post.createOrupdate');
+
+Route::post('/test','BackEnd\Socials\PostController@index');

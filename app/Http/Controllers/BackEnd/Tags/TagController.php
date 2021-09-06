@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\BackEnd\Tags;
 
-use App\Core\Traits\ApiResponser;
+use
+    App\Core\Traits\ApiResponser;
 use App\Repositories\Tags\Contract\TagRepositoryInterface;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

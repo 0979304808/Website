@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackEnd\Jobs;
 
 use App\Core\Traits\ApiResponser;
 use App\Events\NewEvent;
+use App\Jobs\NewJob;
 use App\Models\Jobs\Job;
 use App\Repositories\Jobs\Contract\JobRepositoryInterface;
 use Illuminate\Http\Request;
@@ -50,7 +51,7 @@ class JobController extends Controller
             'list_country' => $list_country,
             'list_province' => $list_province,
         ]);
-        $jobs = $jobs->orderBy('id','desc')->paginate();
+        $jobs = $jobs->orderBy('created_at','desc')->paginate();
         $views = view('backend.jobs.index');
         $views->with('jobs', $jobs);
         $views->with('list_country', $list_country);
@@ -84,7 +85,7 @@ class JobController extends Controller
                 'content' => $content,
                 'username' => $job->user->username,
             );
-            event(new NewEvent($data));
+            NewJob::dispatch($data); // Queue
         }
         return $this->success('Active thành công', 200);
     }
@@ -115,7 +116,7 @@ class JobController extends Controller
                     'content' => $content,
                     'username' => $job->user->username,
                 );
-                event(new NewEvent($data));
+                NewJob::dispatch($data); // Queue
             }
         }
         return $reason;

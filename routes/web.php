@@ -162,6 +162,36 @@ Route::group(['namespace' => 'BackEnd'], function () {
         ], function () {
 
 
+            // Release
+            Route::group([
+                'prefix' => 'release',
+            ], function () {
+                Route::get('/', 'PostController@release')->name('backend.social.release');
+                Route::put('/sale', 'PostController@sale')->name('backend.social.release.sale');
+                Route::put('/', 'PostController@changePost')->name('backend.social.release.update');
+            });
+
+            // Comment
+            Route::group([
+                'prefix' => 'comment',
+            ], function () {
+                Route::get('/', 'CommentController@index')->name('backend.social.comment');
+                Route::put('/', 'CommentController@update')->name('backend.social.comment.update');
+            });
+
+
+            // Post
+            Route::group([
+                'prefix' => 'post',
+            ], function () {
+                Route::get('/', 'PostController@index')->name('backend.social.post');
+                Route::post('/createOrUpdate', 'PostCOntroller@createOrUpdate')->name('backend.social.post.createOrupdate');
+                Route::get('/detail/{post}', 'PostCOntroller@detail')->name('backend.social.post.detail');
+                Route::delete('/', 'PostCOntroller@delete')->name('backend.social.post.delete');
+            });
+
+
+
             // Account
             Route::group([
                 'prefix' => 'accounts'
@@ -202,6 +232,10 @@ Route::group(['namespace' => 'BackEnd'], function () {
     });
 });
 
+
+Route::get('test',function (){
+    return 'abc';
+})->name('test');
 
 //routes for ckeditor
 Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')

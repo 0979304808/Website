@@ -6,6 +6,15 @@
         <ul class="nav side-menu">
             <li class="{{ Request::is('social') ? 'active' : '' }}"><a><i class="fa fa-folder-open-o" aria-hidden="true"></i> Cộng đồng <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
+                    <li class="{{ Request::is('release') ? 'active' : '' }}">
+                        <a href="{{ route('backend.social.release') }}">Bài viết cộng đồng</a>
+                    </li>
+                    <li class="{{ Request::is('comment') ? 'active' : '' }}">
+                        <a href="{{ route('backend.social.comment') }}">Quản lý bình luận</a>
+                    </li>
+                    <li class="{{ Request::is('posts') ? 'active' : '' }}">
+                        <a href="{{ route('backend.social.post') }}">Bài viết biên tập</a>
+                    </li>
                     <li class="{{ Request::is('social/accounts') ? 'active' : '' }}">
                         <a href="{{ route('backend.social.account') }}">Tài khoản</a>
                     </li>

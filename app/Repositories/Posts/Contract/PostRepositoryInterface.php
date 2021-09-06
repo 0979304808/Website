@@ -8,11 +8,22 @@ interface PostRepositoryInterface extends BaseRepositoryInterface
 {
     public function WithAll();
 
-    public function createOrUpdate(array $attribute);
+    public function whereAll($language, $account, $category);
 
-    public function WhereHasCategory($id);
+    public function createOrUpdatePost(array $attribute);
 
-    public function WhereHasTag($id);
+    public function whereLangStatus($lang, $status);
 
-    public function WhereHasCategoryTag($category, $tag);
+    public function wherePin();
+
+    public function whereChoice();
+
+    public function accountHasPosts(array $id);
+
+//
+//    public function WhereHasCategory($id);
+//
+//    public function WhereHasTag($id);
+//
+//    public function WhereHasCategoryTag($category, $tag);
 }
