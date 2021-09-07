@@ -176,7 +176,9 @@ Route::group(['namespace' => 'BackEnd'], function () {
                 'prefix' => 'comment',
             ], function () {
                 Route::get('/', 'CommentController@index')->name('backend.social.comment');
+                Route::post('/', 'CommentController@create')->name('backend.social.comment.create');
                 Route::put('/', 'CommentController@update')->name('backend.social.comment.update');
+                Route::delete('/', 'CommentController@delete')->name('backend.social.comment.delete');
             });
 
 

@@ -95,7 +95,7 @@
                                 {!! $post->content !!}
                             </div>
                         </div>
-                        <button class="btn btn-default btn-comment" data-id="{{ $post->id }}"><i class="fa fa-comments"></i> Comments <span>({{ count($post->comments) }})</span></button>
+                        <button class="btn btn-default btn-comment" data-id="{{ $post->id }}"><i class="fa fa-comments"></i> Comments <span>({{ count($post->comments->where('status',1)) }})</span></button>
                         <div class="comments-{{$post->id}} hidden">
                             <hr>
                             <div class="x_content">
@@ -108,7 +108,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @foreach ($post->comments as $index => $comment)
+                            @foreach ($post->comments->where('status',1) as $index => $comment)
                                 <div class="box-comment col-xs-12">
                                     <div class="post-head">
                                         <div class="col-xs-1 post-img">
@@ -130,7 +130,7 @@
                                                 <div class="post-content" style="overflow-wrap: break-word;">
                                                     {!! $comment->content !!}
                                                 </div>
-                                                <button class="btn btn-default btn-comment btn-child pull-right" data-id="{{$comment->id}}"><i class="fa fa-comment"> ({{count($comment->childComments)}})</i></button>
+                                                <button class="btn btn-default btn-comment btn-child pull-right" data-id="{{$comment->id}}"><i class="fa fa-comment"> ({{count($comment->childComments->where('status',1))}})</i></button>
                                             </div>
                                             <div class="box-child-comments-{{$comment->id}} hidden">
                                                 <div class="col-xs-12 editor-child-{{$comment->id}}">
@@ -144,7 +144,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="childs col-xs-12">
-                                                    @foreach ($comment->childComments as $child)
+                                                    @foreach ($comment->childComments->where('status',1) as $child)
                                                         <div class="box-comment box-child-comment col-xs-12">
                                                             <div class="col-xs-1 post-img">
                                                                 <img src="{{ empty($child->user->profile['image']) ? url('images/user.png') : $child->user->profile['image'] }}" alt="">

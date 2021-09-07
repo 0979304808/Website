@@ -9,4 +9,5 @@ interface CommentRepositoryInterface extends BaseRepositoryInterface
     public function withAll();
 
     public function whereLangStatus($lang, $status);
+    public function createOrUpdateComment(array $attribute);
 }

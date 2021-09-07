@@ -20,8 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::delete('/role','BackEnd\Auth\RoleController@delete');
 
 
-Route::get('/codepurchase','BackEnd\Code\CodeController@codepurchase');
+Route::get('/test','BackEnd\Socials\CommentController@createOrUpdate');
 
-Route::post('/create', 'BackEnd\Socials\PostController@createOrUpdate')->name('backend.social.post.createOrupdate');
-
-Route::post('/test','BackEnd\Socials\PostController@index');

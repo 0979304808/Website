@@ -33,4 +33,15 @@ class ChildCommentRepository extends BaseRepository implements ChildCommentRepos
         }
         return $childComment;
     }
+
+    public function createOrUpdateChildComment(array $attribute)
+    {
+        $id = explode('-', request('_id'));
+        $id = end($id);
+        if (request('_id')){
+            $comment = $this->model->find($id);
+            return $comment->update($attribute);
+        }
+        return $this->model->create($attribute);
+    }
 }

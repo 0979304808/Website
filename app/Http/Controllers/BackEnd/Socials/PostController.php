@@ -173,14 +173,17 @@ class PostController extends Controller
     public function index()
     {
         $posts = $this->post->WithAll()->paginate();
-        $languages = $this->language->all();
-        $accounts = $this->account->all();
-        $categories = $this->category->all();
+        $languages = $this->language->all(['id','name']);
+        $accounts = $this->account->all(['userId','username']);
+        $categories = $this->category->all(['id','name']);
 
         JavaScript::put([
             'link_socials_post' => route('backend.social.post'),
             'link_post_create' => route('backend.social.post.createOrupdate'),
             'link_post_delete' => route('backend.social.post.delete'),
+            'link_comment_create' => route('backend.social.comment.create'),
+            'link_comment_update' => route('backend.social.comment.update'),
+            'link_comment_delete' => route('backend.social.comment.delete'),
         ]);
 
 
@@ -211,9 +214,14 @@ class PostController extends Controller
         $languages = $this->language->all();
         $accounts = $this->account->all();
         $categories = $this->category->all();
-        $listPost = $this->post->all();
+        $listPost = $this->post->whereListDetail($post->id);
         JavaScript::put([
-            'link_socials_post' => route('backend.social.post')
+            'link_socials_post' => route('backend.social.post'),
+            'link_post_create' => route('backend.social.post.createOrupdate'),
+            'link_post_delete' => route('backend.social.post.delete'),
+            'link_comment_create' => route('backend.social.comment.create'),
+            'link_comment_update' => route('backend.social.comment.update'),
+            'link_comment_delete' => route('backend.social.comment.delete'),
         ]);
         $view = view('backend.social.detail');
         $view->with('post', $post);

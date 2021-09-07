@@ -26,9 +26,9 @@
             <label class="control-label col-xs-4" for="language">Language</label>
             <div class="form-group col-xs-8">
                 <select name="language" id="" class="form-control fillter_width_url">
-                    @foreach ($languages as $key => $value)
-                        <option value="{{ route('backend.social.post', ['lang' => $key]) }}" {{ (request('lang') == $key) ? 'selected' : '' }} >{{ $value->name }}</option>
-                    @endforeach
+                    {{--@foreach ($languages as $short => $lang)--}}
+                        {{--<option value="{{ route('backend.social.post', ['lang' => $short]) }}" {{ ($language == $short) ? 'selected' : '' }} >{{ $lang }}</option>--}}
+                    {{--@endforeach--}}
                 </select>
             </div>
         </div>
@@ -38,16 +38,6 @@
                 <select name="account" id="" class="form-control">
                     @foreach ($accounts as $key => $account)
                         <option value="{{ $account['userId'] }}">{{ $account['username'] }}</option>
-                    @endforeach
-                </select>
-            </div>
-        </div>
-         <div class="form-group col-xs-4">
-            <label class="control-label col-xs-3" for="se-category">Category</label>
-            <div class="form-group col-xs-9">
-                <select name="se-category" id="" class="form-control fillter_width_url">
-                    @foreach ($categories as $key => $category)
-                        <option value="{{ route('backend.social.post', ['lang' => request('lang'), 'cate' => $category->id]) }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
             </div>
@@ -88,7 +78,7 @@
                             {!! $post->content !!}
                         </div>
                     </div>
-                    <button class="btn btn-default btn-comment" data-id="{{ $post->id }}"><i class="fa fa-comments"></i> Comments <span>({{ count($post->comments) }})</span></button>
+                    <button class="btn btn-default btn-comment" data-id="{{ $post->id }}"><i class="fa fa-comments"></i> Comments <span>({{ count($post->comments->where('status',1)) }})</span></button>
                     <div class="comments-{{$post->id}} hidden">
                         <hr>
                         <div class="x_content">
@@ -101,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                        @foreach ($post->comments as $index => $comment)
+                        @foreach ($post->comments->where('status',1) as $index => $comment)
                             <div class="box-comment col-xs-12">
                                 <div class="post-head">
                                     <div class="col-xs-1 post-img">
@@ -123,7 +113,7 @@
                                             <div class="post-content" style="overflow-wrap: break-word;">
                                                 {!! $comment->content !!}
                                             </div>
-                                            <button class="btn btn-default btn-comment btn-child pull-right" data-id="{{$comment->id}}"><i class="fa fa-comment"> ({{ count($comment->childComments) }})</i></button>
+                                            <button class="btn btn-default btn-comment btn-child pull-right" data-id="{{$comment->id}}"><i class="fa fa-comment"> ({{ count($comment->childComments->where('status',1)) }})</i></button>
                                         </div>
                                         <div class="box-child-comments-{{$comment->id}} hidden">
                                             <div class="col-xs-12 editor-child-{{$comment->id}}">
@@ -137,7 +127,7 @@
                                                 </div>
                                             </div>
                                             <div class="childs col-xs-12">
-                                                @foreach ($comment->childComments as $child)
+                                                @foreach ($comment->childComments->where('status',1) as $child)
                                                     <div class="box-comment box-child-comment col-xs-12">
                                                         <div class="col-xs-1 post-img">
                                                             <img src="{{ empty($child->user->profile['image']) ? url('images/user.png') : $child->user->profile['image'] }}" alt="">

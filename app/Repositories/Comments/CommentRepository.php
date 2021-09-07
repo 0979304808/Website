@@ -25,12 +25,21 @@ class CommentRepository extends BaseRepository implements CommentRepositoryInter
     public function whereLangStatus($lang, $status)
     {
         $comment = $this->model->with(['childComments', 'user', 'post']);
-        if ($lang != null ){
-            $comment = $comment->where('language_id',$lang);
+        if ($lang != null) {
+            $comment = $comment->where('language_id', $lang);
         }
-        if ($status != null ){
-            $comment = $comment->where('status',$status);
+        if ($status != null) {
+            $comment = $comment->where('status', $status);
         }
         return $comment;
+    }
+
+    public function createOrUpdateComment(array $attribute)
+    {
+        if (request('_id')){
+            $comment = $this->model->find(request('_id'));
+            return $comment->update($attribute);
+        }
+        return $this->model->create($attribute);
     }
 }

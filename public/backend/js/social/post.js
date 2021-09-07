@@ -10,15 +10,16 @@ $(function () {
             return;
         }
         $.ajax({
-            type: 'POST',
+            type: 'PUT',
             url: link_comment_update,
             data: {
                 _method: 'PUT',
-                id: id,
+                _id: id,
                 type: type,
                 content: content.trim(),
             },
             success: function (res) {
+                console.log(res);
                 window.location.reload(true)
             },
             error: function (e) {
@@ -111,6 +112,7 @@ $(function () {
         var content = $('#editor-' + id).html();
         var user = $('select[name="account"]').val();
         var data = {};
+        console.log(user);
 
         if (content == '') {
             notify('Nhập nội dung!', 'danger');
@@ -138,8 +140,7 @@ $(function () {
         } else {
             data = {
                 id: id,
-                user: user,
-                language: language,
+                user_id: user,
                 type: type,
                 content: content
             };

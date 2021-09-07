@@ -87,6 +87,12 @@ class PostRepository extends BaseRepository implements PostRepositoryInterface
     {
         return $this->model->whereIn('user_id', $id)->limit(30)->get();
     }
+
+    // List post trừ đi bài post đang xem.
+    public function whereListDetail($id)
+    {
+        return $this->model->where('id','!=',$id)->get();
+    }
 //
 //    public function WhereHasCategory($id)
 //    {
