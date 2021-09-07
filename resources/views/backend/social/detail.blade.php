@@ -4,6 +4,7 @@
     <style>
         .post-content img{width: 100%;}
         .btn-comment{border: none;}
+        .btn-child{border: none;}
         .post-img{padding-left: 0px;}
         .post-img img{width: 40px; height: 40px; border-radius: 50%}
         .box-comment, .box-comment .box-child-comment{margin-top: 15px;}
@@ -113,7 +114,7 @@
                                             <div class="post-content" style="overflow-wrap: break-word;">
                                                 {!! $comment->content !!}
                                             </div>
-                                            <button class="btn btn-default btn-comment btn-child pull-right" data-id="{{$comment->id}}"><i class="fa fa-comment"> ({{ count($comment->childComments->where('status',1)) }})</i></button>
+                                            <button class="btn btn-default btn-child pull-right" data-id="{{$comment->id}}"><i class="fa fa-comment"> ({{ count($comment->childComments->where('status',1)) }})</i></button>
                                         </div>
                                         <div class="box-child-comments-{{$comment->id}} hidden">
                                             <div class="col-xs-12 editor-child-{{$comment->id}}">

@@ -180,29 +180,4 @@ $(function () {
         })
     });
 
-    // // language
-    // $('select[name="language"]').change(function () {
-    //     var language = $(this).val();
-    //     var account = $('select[name="account"]').val();
-    //     var category = $('select[name="se-category"]').val();
-    //     window.location.href = link_socials_post + "?language=" + language + "&account=" + account + "&category=" + category;
-    // });
-    // // Account
-    // $('select[name="account"]').change(function () {
-    //     var account = $(this).val();
-    //     var language = $('select[name="language"]').val();
-    //     var category = $('select[name="se-category"]').val();
-    //     window.location.href = link_socials_post + "?language=" + language + "&account=" + account + "&category=" + category;
-    // });
-    // // Category
-    // $('select[name="se-category"]').change(function () {
-    //     var category = $(this).val();
-    //     var account = $('select[name="account"]').val();
-    //     var language = $('select[name="language"]').val();
-    //     window.location.href = link_socials_post + "?language=" + language + "&account=" + account + "&category=" + category;
-    // });
-
-
-
-
 });
