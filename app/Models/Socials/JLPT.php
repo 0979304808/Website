@@ -21,4 +21,7 @@ class JLPT extends Model
     {
         return $this->belongsTo(Language::class,'language_id','id');
     }
+    public function scopeSearch($query, $search){
+        return $query->whereId($search)->orWhere('title', 'like', '%' . $search . '%');
+    }
 }

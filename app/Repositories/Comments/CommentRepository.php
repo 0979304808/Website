@@ -26,10 +26,10 @@ class CommentRepository extends BaseRepository implements CommentRepositoryInter
     {
         $comment = $this->model->with(['childComments', 'user', 'post']);
         if ($lang != null) {
-            $comment = $comment->where('language_id', $lang);
+            $comment = $comment->language($lang);
         }
         if ($status != null) {
-            $comment = $comment->where('status', $status);
+            $comment = $comment->status($status);
         }
         return $comment;
     }

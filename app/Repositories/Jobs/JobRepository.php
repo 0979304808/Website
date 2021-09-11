@@ -25,19 +25,16 @@ class JobRepository extends BaseRepository implements JobRepositoryInterface
     {
         $job = $this->model->with('user');
         if ($type !== 'all') {
-            $job = $job->where('type', $type);
+            $job = $job->type($type);
         }
         if ($active !== 'all') {
-            $job = $job->where('active', $active);
+            $job = $job->active($active);
         }
         if ($country !== 'all') {
-            $job = $job->where('country', $country);
-        }
-        if ($type !== 'all') {
-            $job = $job->where('type', $type);
+            $job = $job->country($country);
         }
         if ($province !== 'all') {
-            $job = $job->where('province', $province);
+            $job = $job->province($province);
         }
         return $job;
     }

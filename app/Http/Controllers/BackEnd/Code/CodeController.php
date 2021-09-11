@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\BackEnd\Code;
 
 use App\Core\Traits\Authorization;
-use App\Models\Codes\Code;
+use App\Exports\PremiumExport;
+use App\Imports\PremiumImport;
 use App\Repositories\Codes\Contract\CodeRepositoryInterface;
 use App\Repositories\Premiums\Contract\PremiumMaziiRepositoryInterface;
 use App\Repositories\Serial\Contract\SerialRepositoryInterface;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Purchase\Contract\MaziiPurchaseRepositoryInterface;
@@ -17,6 +19,7 @@ class CodeController extends Controller
 {
     use ApiResponser;
     use Authorization;
+
     private $maziipurchase;
     private $serial;
     private $premiumMazii;
@@ -33,21 +36,26 @@ class CodeController extends Controller
     // List Phiên giao dịch
     public function Transaction(Request $request)
     {
-        $page = $request->get('page', 1);
+        $startOfBeforeMonth = Carbon::now('Asia/Ho_Chi_Minh')->format('Y-m-d_h:i:s-A ');
         $search = $request->get('search', null);
         $filter = $request->get('filter', 'all');
         $sort = $request->get('sort', 'new');
-        if ($filter != null && $filter != 'all' || $sort != null ) {
+        $action = $request->get('action');
+        if ($filter != null && $filter != 'all' || $sort != null) {
             $premiumMazii = $this->premiumMazii->WhereSortFilter($sort, $filter);
         }
         if ($search != null) {
             $premiumMazii = $this->premiumMazii->search($search);
         }
-
         if (isset($premiumMazii)) {
             $premiumMazii = $premiumMazii->with('user')->paginate();
         } else {
             $premiumMazii = $this->premiumMazii->withAll();
+        }
+
+        // Export excel
+        if ($action == 'excel') {
+            return (new PremiumExport($sort, $filter, $search))->download('premium-' . $startOfBeforeMonth . '.csv');
         }
         $providers = [
             'all' => 'Tất cả',
@@ -72,20 +80,9 @@ class CodeController extends Controller
         $status = (in_array($request->get('status'), ["0", "1", "2"])) ? trim($request->get('status')) : "1";
         $code = convert_vi_to_en(str_replace(' ', '', $request->get('code', null)));
         $sort = $request->get('sort', 'new');
-
-//        if ($status != null && $sort != null) {
-//            $codes = $this->code->WhereStatusSort($status, $sort);
-//        }
-//        if ($code != null ){
-//            $codes = $this->code->search($code);
-//        }
-        if (!isset($codes)){
+        if (!isset($codes)) {
             $codes = $this->code->withAll();
         }
-//        JavaScript::put([
-//            'url_codesended' => route('backend.code.codesended'),
-//            'url_recalled' => route('backend.code.recalled')
-//        ]);
         $expired = [
             '7' => '7 ngày',
             '30' => '1 tháng',
@@ -103,18 +100,17 @@ class CodeController extends Controller
         ];
 
         $views = view('backend.code.codesended');
-        $views->with('codes',$codes);
-        $views->with('state',$state);
+        $views->with('codes', $codes);
+        $views->with('state', $state);
         return $views;
     }
 
-    // Table code_purchase
     // Chi tiết đơn hàng
     public function codepurchase(Request $request)
     {
-        $code = $request->get('code', 'null');
+        $code = $request->get('code');
         if ($code) {
-            $purchase = $this->maziipurchase->WithAdmin($code);
+            $purchase = $this->code->findOneBy(['code' => $code]);
             if ($purchase) {
                 return $this->success($purchase, 200);
             }
@@ -122,7 +118,6 @@ class CodeController extends Controller
         return $this->error('Purchase not found', 404);
     }
 
-    // Table serial
     // Thu hồi mã code
     public function recalled(Request $request)
     {
@@ -144,4 +139,19 @@ class CodeController extends Controller
         }
         return $this->error('Models Not Found', 404);
     }
+
+    // View  Import
+    public function viewImport()
+    {
+        return view('backend.code.import');
+    }
+
+    // Import
+    public function import(Request $request)
+    {
+        $file = $request->file('file');
+        (new PremiumImport)->import($file);
+        return redirect()->back()->with('msg', 'Thành công');
+    }
+
 }

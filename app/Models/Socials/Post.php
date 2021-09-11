@@ -72,4 +72,45 @@ class Post extends Model
         $this->status = self::_new;
     }
 
+    public function scopeLanguage($query, $language)
+    {
+        return $query->where('language_id', $language);
+    }
+
+    public function scopeAccount($query, $account)
+    {
+        return $query->where('user_id', $account);
+    }
+
+    public function scopeStatus($query, $status)
+    {
+        return $query->where('status', $status);
+    }
+
+    public function scopeUser($query,array $id)
+    {
+        return $query->whereIn('user_id', $id);
+    }
+
+    public function scopeHasId($query, $id)
+    {
+        return $query->where('id','!=',$id);
+    }
+
+    public function scopeCategory($query, $category)
+    {
+        return $query->where('category_id', $category);
+    }
+
+    public function scopePinTop($query)
+    {
+        return $query->where('top', 1);
+    }
+
+    public function scopeChoiceTop($query)
+    {
+        return $query->where('editor_choice', 1);
+    }
+
+
 }

@@ -26,10 +26,10 @@ class ChildCommentRepository extends BaseRepository implements ChildCommentRepos
     {
         $childComment = $this->model->with(['user', 'comment']);
         if ($lang != null ){
-            $childComment = $childComment->where('language_id',$lang);
+            $childComment = $childComment->language($lang);
         }
         if ($status != null ){
-            $childComment = $childComment->where('status',$status);
+            $childComment = $childComment->status($status);
         }
         return $childComment;
     }

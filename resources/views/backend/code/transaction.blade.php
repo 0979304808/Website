@@ -6,10 +6,10 @@
     <div class="col-md-12 col-xs-12" style="position: -webkit-sticky; position: sticky; top: 0;">
         <div class="x_panel">
             <ul id="myTab" class="nav nav-tabs bar_tabs" >
-                <li  class="{{ Request::is('*code/transaction') ? 'active' : ""}}"><a href="{{route('backend.code.transaction')}}" 
+                <li  class="{{ Request::is('*code/transaction') ? 'active' : ""}}"><a href="{{route('backend.code.transaction')}}"
                         aria-expanded="true">Phiên giao dịch</a>
                 </li>
-                <li  class="{{ Request::is('*users/usersubscribe') ? 'active' : ""}}"><a href="{{route('backend.user.usersubscribe')}}" 
+                <li  class="{{ Request::is('*users/usersubscribe') ? 'active' : ""}}"><a href="{{route('backend.user.usersubscribe')}}"
                         aria-expanded="false">User đăng ký</a>
                 </li>
             </ul>
@@ -35,6 +35,11 @@
                     <p>Từ khóa:</p>
                     <input type="text" class="form-control input-search"
                         placeholder="Nhập user id, email, transaction ..." value="{{ request('search') }}">
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 pull-right">
+                    <p><br></p>
+                    <a  href="{{ route('backend.code.viewImport') }}"><button class="btn btn-sm btn-info export-csv">Nhập Excel</button></a>
+                    <a  href="{{ route('backend.code.transaction').'?action=excel&filter='.request('filter').'&sort='.request('sort','new').'&search='.request('search') }}"><button class="btn btn-sm btn-primary export-csv">Xuất Excel</button></a>
                 </div>
                 <div class="clearfix"></div>
             </div>

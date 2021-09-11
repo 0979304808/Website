@@ -45,4 +45,14 @@ class ChildComment extends Model
     {
         $this->status = self::_new;
     }
+
+    public function scopeLanguage($query, $lang)
+    {
+        return $query->whereLanguage_id($lang);
+    }
+
+    public function scopeStatus($query, $status)
+    {
+        return $query->whereStatus($status);
+    }
 }

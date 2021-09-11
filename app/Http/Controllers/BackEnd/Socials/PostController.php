@@ -142,16 +142,18 @@ class PostController extends Controller
                 NewJob::dispatch($data); // Queue
             }
             if ($type == 'check') {
-                $subject = 'MAZII - THÔNG BÁO ĐĂNG BÀI TUYỂN DỤNG THÀNH CÔNG';
-                $content = 'Mazii xin thông báo: bài đăng tuyển dụng " ' . $object->title . ' " đã được quản trị viên phê duyệt thành công';
-                $data = array(
-                    'from' => 'mazii',
-                    'subject' => $subject,
-                    'email' => $object->user->email,
-                    'content' => $content,
-                    'username' => $object->user->username,
-                );
-                NewJob::dispatch($data); // Queue
+                if ($object->status == 1 ){
+                    $subject = 'MAZII - THÔNG BÁO ĐĂNG BÀI TUYỂN DỤNG THÀNH CÔNG';
+                    $content = 'Mazii xin thông báo: bài đăng tuyển dụng " ' . $object->title . ' " đã được quản trị viên phê duyệt thành công';
+                    $data = array(
+                        'from' => 'mazii',
+                        'subject' => $subject,
+                        'email' => $object->user->email,
+                        'content' => $content,
+                        'username' => $object->user->username,
+                    );
+                    NewJob::dispatch($data); // Queue
+                }
             }
             return response('success');
         }

@@ -12,6 +12,7 @@ class JlptRepository extends BaseRepository implements JlptRepositoryInterface
 {
     use ApiResponser;
     use Authorization;
+
     protected $model;
 
     public function __construct(JLPT $jlpt)
@@ -19,6 +20,7 @@ class JlptRepository extends BaseRepository implements JlptRepositoryInterface
         parent::__construct($jlpt);
         $this->model = $jlpt;
     }
+
     public function WithAll()
     {
         return $this->model->with('admin');
@@ -26,7 +28,7 @@ class JlptRepository extends BaseRepository implements JlptRepositoryInterface
 
     public function search($search)
     {
-        return $this->model->where('id', $search)->orWhere('title', 'like', '%' . $search . '%')->with('admin');
+        return $this->model->search($search)->with('admin');
     }
 
     public function createOrUpdate(array $attribute)
@@ -50,7 +52,7 @@ class JlptRepository extends BaseRepository implements JlptRepositoryInterface
     public function deleteJplt($id)
     {
         $jplt = $this->model->find($id);
-        if ($jplt){
+        if ($jplt) {
             $this->Unlink($jplt->image);
             $jplt->delete();
         }

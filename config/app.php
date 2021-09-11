@@ -178,6 +178,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -236,6 +237,7 @@ return [
         'HTML' => Collective\Html\HtmlFacade::class,
         'Javascript' => Laracasts\Utilities\JavaScript\JavaScriptFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
 
     ],

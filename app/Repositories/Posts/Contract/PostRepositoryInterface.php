@@ -19,6 +19,7 @@ interface PostRepositoryInterface extends BaseRepositoryInterface
     public function whereChoice();
 
     public function accountHasPosts(array $id);
+
     public function whereListDetail($id);
 //
 //    public function WhereHasCategory($id);

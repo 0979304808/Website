@@ -28,19 +28,18 @@ class PostRepository extends BaseRepository implements PostRepositoryInterface
     {
         $posts = $this->model->with(['category', 'comments', 'user']);
         if ($language !== 'all') {
-            $posts = $posts->where('language_id', $language);
+            $posts = $posts->language($language);
         }
         if ($account !== 'all') {
-            $posts = $posts->where('user_id', $account);
+            $posts = $posts->account($account);
         }
         if ($category !== 'all') {
-            $posts = $posts->where('category_id', $category);
+            $posts = $posts->category($category);
         }
         return $posts;
-
     }
 
-
+    // Create or Update
     public function createOrUpdatePost(array $attribute)
     {
         if (isset($attribute['img'])) {
@@ -60,38 +59,38 @@ class PostRepository extends BaseRepository implements PostRepositoryInterface
         return $post;
     }
 
+    // Where language and status
     public function whereLangStatus($lang, $status)
     {
         $post = $this->model->with(['category', 'comments', 'user']);
         if ($lang != null) {
-            $post = $post->where('language_id', $lang);
+            $post = $post->language($lang);
         }
         if ($status != null) {
-            $post = $post->where('status', $status);
+            $post = $post->status($status);
         }
         return $post;
     }
 
-
     public function wherePin()
     {
-        return $this->model->where('top', 1)->with(['category', 'comments', 'user']);
+        return $this->model->pinTop()->with(['category', 'comments', 'user']);
     }
 
     public function whereChoice()
     {
-        return $this->model->where('editor_choice', 1)->with(['category', 'comments', 'user']);
+        return $this->model->choiceTop()->with(['category', 'comments', 'user']);
     }
 
     public function accountHasPosts(array $id)
     {
-        return $this->model->whereIn('user_id', $id)->limit(30)->get();
+        return $this->model->user($id)->limit(30)->get();
     }
 
     // List post trừ đi bài post đang xem.
     public function whereListDetail($id)
     {
-        return $this->model->where('id','!=',$id)->get();
+        return $this->model->hasId($id)->get();
     }
 //
 //    public function WhereHasCategory($id)

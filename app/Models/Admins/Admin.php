@@ -5,6 +5,7 @@ namespace App\Models\Admins;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
 use Laratrust\Traits\LaratrustUserTrait;
 use App\Models\Roles\Role;
 use App\Models\Permissions\Permission;
@@ -25,7 +26,7 @@ class Admin extends Authenticatable
 
     public function setPassWordAttribute($password)
     {
-        $this->attributes['password'] = bcrypt(($password));
+        $this->attributes['password'] = Hash::make($password);
     }
 
     public function setUsername($username)
