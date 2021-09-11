@@ -46,6 +46,7 @@ class PremiumExport implements FromQuery, WithMapping, WithHeadings
             'provider',
             'created_at',
             'updated_at',
+            'expire_at',
         ];
         $model = PremiumMazii::query()->with(['user'])->select($select);
         if ($filter != null ){
@@ -71,6 +72,7 @@ class PremiumExport implements FromQuery, WithMapping, WithHeadings
             isset($premium->provider) ? $premium->provider : '',
             isset($premium->created_at) ? $premium->created_at : '',
             isset($premium->updated_at) ? $premium->updated_at : '',
+            isset($premium->expire_at) ? $premium->expire_at : '',
         ];
     }
 
@@ -84,6 +86,7 @@ class PremiumExport implements FromQuery, WithMapping, WithHeadings
             'Provider',
             'Created_at',
             'Updated_at',
+            'Expire_at',
         ];
     }
 }
