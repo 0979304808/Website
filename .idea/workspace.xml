@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c87681d-158e-4117-9f6f-8259113b6644" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/backend/js/profiles/upload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Core/Traits/UploadTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Traits/UploadTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Exports/PremiumExport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exports/PremiumExport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Imports/PremiumImport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Imports/PremiumImport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/code/import.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/code/import.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Admins/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackEnd/Admins/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Admins/AdminRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Admins/AdminRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Admins/Contract/AdminRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Admins/Contract/AdminRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/premium-2021-09-10_11_26_24-AM .csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admins/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admins/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -424,7 +430,11 @@
       <workItem from="1631239077675" duration="11746000" />
       <workItem from="1631267047324" duration="2961000" />
       <workItem from="1631272673705" duration="84000" />
-      <workItem from="1631323236198" duration="18538000" />
+      <workItem from="1631323236198" duration="19299000" />
+      <workItem from="1631352179850" duration="610000" />
+      <workItem from="1631495888424" duration="6076000" />
+      <workItem from="1631512573169" duration="14253000" />
+      <workItem from="1631581599795" duration="7343000" />
     </task>
     <servers />
   </component>

@@ -19,12 +19,11 @@ class AdminRepository extends BaseRepository implements AdminRepositoryInterface
         $this->model = $admin;
     }
 
-    public function updateImage($file, $id)
+    // Update Image profile
+    public function updateImage($file, Admin $admin)
     {
-        $admin = $this->model->find($id);
         $this->Unlink($admin->image); // Hàm xóa ảnh cũ.
-        $filename = 'Thumb_image_' . time() . '.' . $file->getClientOriginalExtension();
-        $path = $this->saveImage($file, $filename);
+        $path = $this->saveImageBase64($file);
         return $admin->update([
             'image' => $path
         ]);

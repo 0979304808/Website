@@ -3,14 +3,17 @@
 namespace App\Exports;
 
 use App\Models\Premiums\PremiumMazii;
+use Carbon\Carbon;
 use Maatwebsite\Excel\Concerns\Exportable;
-use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\FromQuery;
+use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use Maatwebsite\Excel\Concerns\WithEvents;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
+use Maatwebsite\Excel\Events\AfterSheet;
 
 
-class PremiumExport implements FromQuery, WithMapping, WithHeadings
+class PremiumExport implements FromQuery, WithMapping, WithHeadings, WithEvents, ShouldAutoSize
 {
     use Exportable;
 
@@ -49,11 +52,11 @@ class PremiumExport implements FromQuery, WithMapping, WithHeadings
             'expire_at',
         ];
         $model = PremiumMazii::query()->with(['user'])->select($select);
-        if ($filter != null ){
-            return $model->where('provider',$filter)
+        if ($filter != null) {
+            return $model->where('provider', $filter)
                 ->orderBy('created_at', $sort);
         }
-        if ($search != null ){
+        if ($search != null) {
             return $model->whereHas('user', function ($query) use ($search) {
                 $query->where('userId', 'like', '%' . $search . '%');
                 $query->orWhere('email', 'like', '%' . $search . '%');
@@ -70,9 +73,9 @@ class PremiumExport implements FromQuery, WithMapping, WithHeadings
             isset($premium->user->email) ? $premium->user->email : '',
             isset($premium->transaction) ? $premium->transaction : '',
             isset($premium->provider) ? $premium->provider : '',
-            isset($premium->created_at) ? $premium->created_at : '',
-            isset($premium->updated_at) ? $premium->updated_at : '',
-            isset($premium->expire_at) ? $premium->expire_at : '',
+            isset($premium->created_at) ? Carbon::parse($premium->created_at, 'UTC')->format('Y-m-d_h:i:s-A ') : '',
+            isset($premium->updated_at) ? Carbon::parse($premium->updated_at, 'UTC')->format('Y-m-d_h:i:s-A ') : '',
+            isset($premium->expire_at) ? Carbon::parse($premium->expire_at, 'UTC')->format('Y-m-d_h:i:s-A ') : '',
         ];
     }
 
@@ -87,6 +90,19 @@ class PremiumExport implements FromQuery, WithMapping, WithHeadings
             'Created_at',
             'Updated_at',
             'Expire_at',
+        ];
+    }
+
+    public function registerEvents(): array
+    {
+        return [
+            AfterSheet::class => function (AfterSheet $event) {
+                $event->getDelegate()->getStyle('A1')->applyFromArray([
+                    'font' => [
+                        'bold' => true
+                    ]
+                ]);
+            },
         ];
     }
 }

@@ -18,10 +18,10 @@ trait UploadTable {
         $path = $space . $fileName;
         $host = config('access.ftp.host').$path;
 
-        /* create a stream context telling PHP to overwrite the file */ 
-        $options = array('ftp' => array('overwrite' => true)); 
-        $stream = stream_context_create($options); 
-        $success = file_put_contents($host, $file->getClientOriginalName(), 0, $stream); 
+        /* create a stream context telling PHP to overwrite the file */
+        $options = array('ftp' => array('overwrite' => true));
+        $stream = stream_context_create($options);
+        $success = file_put_contents($host, $file->getClientOriginalName(), 0, $stream);
 
         return config('access.ftp.link').$fileName;
     }
@@ -31,7 +31,7 @@ trait UploadTable {
      * @param UploadedFile $file
      * @param string $filename
      * @param string $disk
-     * 
+     *
      * @return path
      */
     public function saveImage(UploadedFile $file, $filename, $disk = null){
@@ -43,5 +43,11 @@ trait UploadTable {
         Image::make($file->path())->save($path);
 
         return !is_null($disk) ? $path : url("uploads/images/$filename");
+    }
+
+    public function saveImageBase64($base64 ,$folder = 'uploads/images/'){
+        $name = time().'.'.explode('/',explode(':',substr($base64, 0, strpos($base64, ';')))[1])[1]; // Lấy đuôi image
+        Image::make($base64)->save(public_path($folder).'/'.$name);
+        return url($folder).'/'.$name;
     }
 }

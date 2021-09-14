@@ -82,8 +82,8 @@ Route::group(['namespace' => 'BackEnd'], function () {
                     'where' => ['admin', '[0-9]+']
                 ], function () {
                     Route::get('/', 'AdminController@profile')->name('backend.profile');
-                    Route::put('image', 'AdminController@updateImage')->name('backend.profile.image');
                     Route::put('update', 'AdminController@updateProfile')->name('backend.profile.update');
+                    Route::put('image', 'AdminController@image')->name('backend.update.profile.image');
                 });
 
             });

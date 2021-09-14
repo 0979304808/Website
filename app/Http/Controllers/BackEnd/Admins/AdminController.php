@@ -10,6 +10,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ImageRequest;
 use App\Repositories\Admins\Contract\AdminRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
+use JavaScript;
 
 class AdminController extends Controller
 {
@@ -61,4 +64,14 @@ class AdminController extends Controller
         }
         return $this->error('Không có quyền truy cập', 401);
     }
+
+    public function image(Request $request,Admin $admin)
+    {
+        if (Auth::id() == $admin->id) {
+            $this->admin->updateImage($request->base64, $admin);
+            return redirect()->back();
+        }
+        return $this->error('Không có quyền truy cập', 401);
+    }
+
 }
